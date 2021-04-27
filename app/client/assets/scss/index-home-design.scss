@@ -1,0 +1,51 @@
+$white: #ffffff;
+$blue: #2E86C1;
+$green: #28B463;
+$red: #E74C3C;
+$btn0-border-radius:5px;
+
+.signup-btn{
+  background-color: $green;
+  color: $white;
+  border-radius: $btn0-border-radius;
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-block;
+}
+.signup-btn:hover{
+  background-color: #145A32;
+  color: $white;
+}
+.delete-btn{
+  background-color: $red;
+  color: $white;
+  border-radius: $btn0-border-radius;
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-block;
+}
+.delete-btn:hover{
+  background-color: #943126;
+  color: $white;
+}
+input[type=submit]{
+  background-color: $blue;
+  color: $white;
+  border-radius: $btn0-border-radius;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  border: none;
+  padding: 4px;
+  display: inline-block;
+}
+input[type=submit]:hover{
+  background-color: #1B4F72;
+  color: $white;
+}
