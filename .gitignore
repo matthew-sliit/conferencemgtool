@@ -1,2 +1,2 @@
-diagrams/*
-node_modules/*
+/diagrams/*
+/node_modules/*
