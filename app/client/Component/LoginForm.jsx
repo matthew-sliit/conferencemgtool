@@ -15,7 +15,7 @@ export default class LoginForm extends React.Component{
         this.getFromRouter = this.getFromRouter.bind(this);
     }
     componentDidMount() {
-        this.getFromRouter();
+        //this.getFromRouter();
     }
     //method get
     getFromRouter(){
