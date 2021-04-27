@@ -41,4 +41,7 @@ app
  │   └───tests
  └───shared
      └───models
+node_modules
+package.json
+package-lock.json
 ```
