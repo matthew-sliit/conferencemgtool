@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-30T18:08:20.079Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36 Edg/89.0.774.77" etag="-xb1rjngPuVHUE9byewV" version="14.7.3" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-05-30T18:20:09.221Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36 Edg/89.0.774.77" etag="BzY4-sF-SBOVWt3gyl6P" version="14.7.3" type="github" pages="5">
   <diagram id="yt5JU67_8UWN-JsmqbRS" name="user">
-    <mxGraphModel dx="1038" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -55,14 +55,14 @@
         <mxCell id="SaKpXr64RBN14kan-lKh-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="420" y="730" width="230" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="SaKpXr64RBN14kan-lKh-2" value="Conference paper management tool" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="425" y="730" width="210" height="20" as="geometry" />
+        <mxCell id="s3DEPT7w7drun-5wqqgQ-1" value="Conference management tool" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="730" width="170" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="iCyQIotGxuH_81xqnklV" name="reviewer">
-    <mxGraphModel dx="1038" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WgaoPQJk9dSTRBZjUE4S-0" />
         <mxCell id="WgaoPQJk9dSTRBZjUE4S-1" parent="WgaoPQJk9dSTRBZjUE4S-0" />
@@ -108,14 +108,14 @@
         <mxCell id="yXwc6Z-XShn2CPwx8U0a-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="WgaoPQJk9dSTRBZjUE4S-1">
           <mxGeometry x="110" y="20" width="220" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="yXwc6Z-XShn2CPwx8U0a-1" value="Conference paper management tool" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="WgaoPQJk9dSTRBZjUE4S-1">
-          <mxGeometry x="115" y="20" width="210" height="20" as="geometry" />
+        <mxCell id="5EKTKLhkCKnHtVXDFYH_-0" value="Conference management tool" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="WgaoPQJk9dSTRBZjUE4S-1">
+          <mxGeometry x="140" y="20" width="170" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="Je3vT-fydZ8JkIXlXKwk" name="Editor">
-    <mxGraphModel dx="1038" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="dMsXdLz-28r18CYDr1W1-0" />
         <mxCell id="dMsXdLz-28r18CYDr1W1-1" parent="dMsXdLz-28r18CYDr1W1-0" />
@@ -161,8 +161,8 @@
         <mxCell id="oLCzOYu5GxXoJdFNm0fS-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="dMsXdLz-28r18CYDr1W1-1">
           <mxGeometry x="150" width="220" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="22Nqf8A_CCBYxiQ7Sdjr-0" value="Conference paper management tool" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="dMsXdLz-28r18CYDr1W1-1">
-          <mxGeometry x="155" width="210" height="20" as="geometry" />
+        <mxCell id="O202edCFWw_ige8l6LR2-0" value="Conference management tool" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="dMsXdLz-28r18CYDr1W1-1">
+          <mxGeometry x="175" width="170" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
