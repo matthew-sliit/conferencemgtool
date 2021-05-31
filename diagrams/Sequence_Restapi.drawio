@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-30T13:21:35.267Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36 Edg/89.0.774.77" etag="s2omL_iWR4X-yZanT4N5" version="14.7.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-05-31T08:50:27.876Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="jL6ksa2HRJbU76Es6SU-" version="14.7.3" type="github" pages="4">
   <diagram id="q4KeziVVks7lWcbCtezH" name="Admin">
-    <mxGraphModel dx="1038" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1010" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -76,8 +76,8 @@
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-25" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="1" vertex="1">
           <mxGeometry x="1185" y="186" width="10" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="NYb0u8Sw0OUqS86-CbN8-26" value="PUT /register/:uid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1049" y="196" width="110" height="20" as="geometry" />
+        <mxCell id="NYb0u8Sw0OUqS86-CbN8-26" value="POST /register" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1059" y="196" width="90" height="20" as="geometry" />
         </mxCell>
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-27" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;conferencedb&lt;br&gt;:mongodb&lt;/span&gt;" style="shape=umlLifeline;participant=umlEntity;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="1335" y="76" width="40" height="300" as="geometry" />
