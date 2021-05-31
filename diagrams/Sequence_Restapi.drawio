@@ -1,26 +1,26 @@
-<mxfile host="app.diagrams.net" modified="2021-05-31T08:57:25.074Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="9JmPRcV7rf2TANtx8fWc" version="14.7.3" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-05-31T08:58:58.121Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="rkZG9mt47Pp6pfIRcXcA" version="14.7.3" type="github" pages="5">
   <diagram id="q4KeziVVks7lWcbCtezH" name="Admin">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="qA1TUJiwET-4Ho8Xsl13-1" value="sd Administrator" style="shape=umlFrame;whiteSpace=wrap;html=1;width=105;height=20;" parent="1" vertex="1">
-          <mxGeometry x="15" width="725" height="1070" as="geometry" />
+          <mxGeometry x="15" y="10" width="725" height="1060" as="geometry" />
         </mxCell>
         <mxCell id="R8l2XtGumIW_8lj8JWmO-17" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; margin-left: 5px ; text-align: left&quot;&gt;&lt;b&gt;alt&lt;/b&gt;&lt;/p&gt;" style="html=1;shape=mxgraph.sysml.package;overflow=fill;labelX=32;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="20" y="540" width="690" height="470" as="geometry" />
         </mxCell>
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-1" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;Admin&lt;br&gt;&lt;/span&gt;" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="60" y="30" width="20" height="1090" as="geometry" />
+          <mxGeometry x="60" y="40" width="20" height="1030" as="geometry" />
         </mxCell>
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-2" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;Admin Home&lt;/span&gt;" style="shape=umlLifeline;participant=umlBoundary;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="170" y="30" width="50" height="1080" as="geometry" />
+          <mxGeometry x="170" y="40" width="50" height="1030" as="geometry" />
         </mxCell>
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-3" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;React Frontend&lt;/span&gt;" style="shape=umlLifeline;participant=umlControl;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="300" y="30" width="40" height="1080" as="geometry" />
+          <mxGeometry x="300" y="40" width="40" height="1030" as="geometry" />
         </mxCell>
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-4" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;Koa Backend&lt;/span&gt;" style="shape=umlLifeline;participant=umlControl;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="470" y="30" width="40" height="1100" as="geometry" />
+          <mxGeometry x="470" y="40" width="40" height="1030" as="geometry" />
         </mxCell>
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="1" vertex="1">
           <mxGeometry x="65" y="140" width="10" height="920" as="geometry" />
@@ -44,7 +44,7 @@
           <mxGeometry x="485" y="453" width="10" height="80" as="geometry" />
         </mxCell>
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-15" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;conferencedb&lt;br&gt;:mongodb&lt;/span&gt;" style="shape=umlLifeline;participant=umlEntity;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="670" y="30" width="40" height="1070" as="geometry" />
+          <mxGeometry x="670" y="40" width="40" height="1030" as="geometry" />
         </mxCell>
         <mxCell id="NYb0u8Sw0OUqS86-CbN8-16" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="1" vertex="1">
           <mxGeometry x="685" y="453" width="10" height="67" as="geometry" />
