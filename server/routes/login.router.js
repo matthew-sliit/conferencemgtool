@@ -1,8 +1,9 @@
 const Router = require('@koa/router');
 //from mongo
-const checkDB = require('../models/mongodb.api').connectDB;
-const saveDocument = require('../models/mongodb.api').saveDocument;
-const readDocument = require('../models/mongodb.api').readDocument;
+const checkDB = require('../api/db/mongodb.api').connectDB;
+const saveDocument = require('../api/db/mongodb.api').saveDocument;
+const readDocument = require('../api/db/mongodb.api').readDocument;
+const Login = require('../api/login.api').Login;
 //database collection
 const collection = "LoginData";
 
@@ -34,22 +35,27 @@ router.post('/',async (context)=>{
             }
         );
         //console.log(userFromDB);
-        console.log("router post -> " + JSON.stringify(userFromDB));
+        //console.log("router post -> " + JSON.stringify(userFromDB));
         //response.setHeader('Content-Type','text');
         context.response.set('Content-Type','application/json');//same as context.response.set
         if (userFromDB.length<1){
             console.log("No users found!");
             context.response.body ="Invalid Account!";
+
             //response.set("msg","wrong-account");
             //await context.render('index',{msg:"Invalid Account"});
-        }else if(userFromDB[0].password===password){
+        }else{
             //if has value
-            console.log("Successful login");
-            context.response.body ="Successful Login!";
-        }
-        else{
-            console.log("Incorrect Password!");
-            context.response.body ="Wrong Password!";
+            let login = new Login();
+            login.loadFromDB(userFromDB[0]);
+            console.log("loaded: "+JSON.stringify(login.getSaveToDB()));
+            if (login.passwordIsValid(password)) {
+                console.log("Successful login");
+                context.response.body = "Successful Login!";
+            } else {
+                console.log("Incorrect Password!");
+                context.response.body = "Wrong Password!";
+            }
         }
     }catch (e){
         console.log(e);
