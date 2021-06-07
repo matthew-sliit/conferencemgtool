@@ -12,7 +12,7 @@
   "scripts": {
     "https-mode": "set HTTPS=true&&npm start",
     "start": "parcel index.html -p 1234",
-    "test": "jest tests"
+    "test": "jest tests --passWithNoTests"
   },
   "author": "EagleEye",
   "license": "ISC",
