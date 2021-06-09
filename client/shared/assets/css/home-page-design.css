@@ -1,0 +1,43 @@
+.nav-ml{
+    margin-left: 270px;
+}
+.animation-cursor{
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background-color: #138D75;
+}
+.collapse-transition{
+  transition: height 600ms;
+}
+.link-no-style{
+  color: inherit;
+  text-decoration: none;
+}
+.link-no-style:hover{
+  color: inherit;
+  text-decoration: none;
+}
+/*
+===== navigation panels bg ====
+*/
+.nav-bar-bg{
+  background-color: #EBDEF0;
+}
+/*
+===== rectangular header bg ===
+*/
+#header-rectangle{
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+  transition:background-image 1s ease;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+.content{
+  position: absolute;
+  top: 180px;
+  left: 300px;
+}
