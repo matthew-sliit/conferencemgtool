@@ -31,13 +31,19 @@
   height: 100px;
   width: 100%;
   background-color: transparent;
-  background-image: url("https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/img/bg-bl.jpeg");
+  background-image: url('https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/img/bg-bl.jpeg');
   background-repeat: no-repeat;
   background-position: 0 70%;
   background-size: cover;
   top: 0;
   left: 0;
   position: relative;
+}
+.rectangle-below-symbols{
+  background-image: url("https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/img/bg-bl.jpeg");
+  background-repeat: no-repeat;
+  background-position: 3% 70%;
+  background-size: cover;
 }
 .content{
   position: absolute;
