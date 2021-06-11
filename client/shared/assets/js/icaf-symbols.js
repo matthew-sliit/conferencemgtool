@@ -68,3 +68,16 @@ function drawBorder(top,left,height,width,bg_left, bg_top, bg_right, bg_bottom, 
     border.style.borderBottom = thickness+'px solid '+ bg_bottom;
     document.getElementById(appendID).appendChild(border);
 }
+function drawRectangleCSS(top,left,height,width,angle,styleClass, appendID){
+    //alert("drawing rectangle!");
+    let rectangle = document.createElement("div");
+    //let style = rectangle.style;
+    rectangle.style.top = top + 'px';
+    rectangle.style.left = left + 'px';
+    rectangle.className = styleClass;
+    rectangle.style.position = "absolute";
+    rectangle.style.height = height+'px';
+    rectangle.style.width = width+'px';
+    rectangle.style.webkitTransform = "rotate("+angle+"deg)";
+    document.getElementById(appendID).appendChild(rectangle);
+}
