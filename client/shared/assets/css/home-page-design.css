@@ -39,14 +39,14 @@
   left: 0;
   position: relative;
 }
+.content{
+  position: absolute;
+  top: 180px;
+  left: 300px;
+}
 .rectangle-below-symbols{
   background-image: url("https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/img/bg-bl.jpeg");
   background-repeat: no-repeat;
   background-position: 3% 70%;
   background-size: cover;
-}
-.content{
-  position: absolute;
-  top: 180px;
-  left: 300px;
 }
