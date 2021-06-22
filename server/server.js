@@ -6,6 +6,7 @@ require('dotenv').config();
 //routers
 const HomeRoutes = require('./routes/home.router.js').DefaultRouter;
 const LoginRoutes = require('./routes/login.router.js').LoginRouter;
+const ProfileRoutes = require('./routes/profile.router').ProfileRouter;
 //setup server
 const server = new Koa();
 //attach to server
@@ -14,6 +15,7 @@ server.use(formidable({uploadDir:'./server/files/temp', keepExtensions:true}));
 server.use(bodyparser())
     .use(HomeRoutes.routes()).use(HomeRoutes.allowedMethods())
     .use(LoginRoutes.routes()).use(LoginRoutes.allowedMethods())
+    .use(ProfileRoutes.routes()).use(ProfileRoutes.allowedMethods())
     .use(context=>{
         //where the request is to an invalid endpoint
         context.body="Access Denied!";

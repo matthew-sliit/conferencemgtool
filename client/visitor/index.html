@@ -2,11 +2,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>React Rendered Home</title>
+    <title>ICAF-2021</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/css/home-page-design.css">
+    <script src="https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/js/icaf-symbols.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/js/home-page-cursor.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/js/change-dropdown-symbol.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/matthew-sliit/conferencemgtool@master/client/shared/assets/js/particles.js"></script>
+    <style>
+        .particle-circle{
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            background-color: royalblue;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-  <h1>Index Page</h1>
-  <div id="app"></div>
+<header>
+    <!-- Header images and symbols -->
+    <div style="top:30px;">
+        <!-- width 100%, height 100px -->
+        <div id="header-rectangle"></div>
+        <div id="symbols"></div>
+        <script type="text/javascript">
+            drawICAF('symbols');
+            setupParticles('header-rectangle','particle-circle',48,"blue",1,0);
+            drawRectangleCSS(0,460,100,460,0,"rectangle-below-symbols",'header-rectangle');
+        </script>
+    </div>
+    <!-- Horizontal navigation panel -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-bar-bg ml-4">
+        <div class="container-fluid nav-ml">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active" id="setcursor_home" onmouseover="moveCursorTo('setcursor_home');" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#" id="setcursor_main2" onmouseover="moveCursorTo('setcursor_main2');" onmouseleave="moveCursorTo('setcursor_home')">Timeline</a>
+                    </li>
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="setcursor_ws" onmouseover="moveCursorTo('setcursor_ws');" onmouseleave="moveCursorTo('setcursor_home')">
+                            Commitee
+                        </a>
+                        <ul class="dropdown-menu mx-3" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="setcursor_attendee" onmouseover="moveCursorTo('setcursor_attendee');" onmouseleave="moveCursorTo('setcursor_home')">
+                            Past proceedings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#" id="setcursor_contact" onmouseover="moveCursorTo('setcursor_contact');" onmouseleave="moveCursorTo('setcursor_home')">Contact us</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#" id="setcursor_reg" onmouseover="moveCursorTo('setcursor_reg');" onmouseleave="moveCursorTo('setcursor_home')">Register</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#" id="setcursor_login" onmouseover="moveCursorTo('setcursor_login');" onmouseleave="moveCursorTo('setcursor_home')">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Left Naviagtion panel -->
+    <div class="container nav-bar-bg" style="position: absolute; top:110px; width: 280px; z-index: -1;">
+        <a href="/" class="d-flex align-items-center pb-3 mb-4 link-dark text-decoration-none">
+        </a>
+        <ul class="list-unstyled ps-0">
+            <li class="mb-2">
+                <a data-bs-toggle="collapse" href="#nav-collapse-l0" class="link-no-style" id="link-collapse-l0" aria-expanded="false" onclick="setLinkDropdownArrow('l0')">For Authors
+                    <i class="fa fa-angle-right" id="l0"></i>
+                </a>
+                <div class="collapse collapse-transition" id="nav-collapse-l0">
+                    <ul class="list-unstyled ps-4">
+                        <li role="button">Call for papers</li>
+                        <li role="button">Submission guidelines</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-2">
+                <a data-bs-toggle="collapse" href="#nav-collapse-l1" class="link-no-style" id="link-collapse-l1" aria-expanded="false" onclick="setLinkDropdownArrow('l1')">Workshops
+                    <i class="fa fa-angle-right" id="l1"></i>
+                </a>
+                <div class="collapse collapse-transition" id="nav-collapse-l1">
+                    <ul class="list-unstyled ps-4">
+                        <li role="button" onclick="window.location.href='#WS'">Workshops</li>
+                        <li role="button" onclick="window.location.href='#callForWS'">Call for Workshops</li>
+                        <li role="button" onclick="window.location.href='#WSsubmit'">Submission guidelines</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-2">
+                <a data-bs-toggle="collapse" href="#nav-collapse-l2" class="link-no-style" id="link-collapse-l2" aria-expanded="false" onclick="setLinkDropdownArrow('l2')">For Attendee
+                    <i class="fa fa-angle-right" id="l2"></i>
+                </a>
+                <div class="collapse collapse-transition" id="nav-collapse-l2">
+                    <ul class="list-unstyled ps-4">
+                        <li role="button">Instructions</li>
+                    </ul>
+                </div>
+            <li class="mb-2">
+                <span>News</span>
+                <div style="overflow-y: scroll; height: 500px;" class="mx-1">
+                    <p><h6>June 4 -Lorey ipsum</h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <p><h6>June 1 -Lorey ipsum</h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <p><h6>May 25 -Lorey ipsum</h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+<!-- animated cursor -->
+<div class="animation-cursor" id="animation-cursor"></div>
+<!-- rendered content from App.jsx -->
+<!-- Every content will contain the footer as the finishing touch -->
+<div id="content" class="content mx-2">
+    <h5>Lorem</h5>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+    </p>
+</div>
+<!-- external js-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    moveCursorTo('setcursor_home');
+</script>
 </body>
 <script src="index.jsx"></script>
 </html>

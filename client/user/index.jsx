@@ -1,10 +1,10 @@
 import React from "react";
 import {render} from "react-dom";
+import "../shared/assets/css/home-page-design.css";
+{/* main content */}
+import App from "./App";
+render(<App/>, document.getElementById('content'));
 
-const element = (
-  <form method="get" action="http://localhost:3000/login">
-        <input type="submit" value="server get"/>
-  </form>
-);
-render(<h1>Welcome to the Backend!</h1>, document.getElementById('body'));
-render(element, document.getElementById('body'));
+{/* navigation bar */}
+import NavigationBar from "./Component/NavigationBar";
+render(<NavigationBar/>,document.getElementById('navbarSupportedContent'));

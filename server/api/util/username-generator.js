@@ -1,10 +1,12 @@
+const UserRoles = require('../common/roles').UserRoles;
+
 const Role = require('../common/roles').UserRoles;
 exports.generateUsername = function generateUsername(role){
     let prefix = '';
     if(role===Role.ADMIN){
         prefix = 'SAO';
     }else if(role===Role.EDITOR){
-        prefix = 'CER';
+        prefix = 'ECR';
     }else if(role===Role.REVIEWER){
         prefix = 'CRR';
     }else if(role===Role.RESEARCHER){
@@ -13,6 +15,8 @@ exports.generateUsername = function generateUsername(role){
         prefix = 'WSP';
     }else if(role===Role.ATTENDEE){
         prefix = 'AU';
+    }else{
+        prefix = "UN";
     }
     //2nd part of username
     let currentDT = new Date();
@@ -40,4 +44,17 @@ exports.generateUsername = function generateUsername(role){
     const letter = charArray[number];
     //apply parts together
     return (prefix+year+monthString+dateString+digit3+letter);
+}
+exports.UserRoleIsValid = function UserRoleIsValid(role){
+    if(role===UserRoles.ADMIN){
+        return true;
+    }else if(role===UserRoles.EDITOR){
+        return true;
+    }else if(role===UserRoles.REVIEWER){
+        return true;
+    }else if(role===UserRoles.RESEARCHER){
+        return true;
+    }else if(role===UserRoles.WORKSHOP_PRESENTER){
+        return true;
+    }else return role === UserRoles.ATTENDEE;
 }

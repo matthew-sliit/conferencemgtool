@@ -27,6 +27,20 @@ exports.saveDocument = function saveDocument(id, obj){
         });
     });
 }
+exports.saveDocumentGetId = function saveDocumentGetId(id, obj){
+    return new Promise((resolve)=> {
+        mongodbClient.connect(url, function (err, db) {
+            if (err) throw err;
+            const dbo = db.db(database);
+            //console.log("saving new document{"+id+"} with ["+JSON.stringify(obj)+"]");
+            dbo.collection(id).insert(obj, function (err, res) {
+                if (err) throw err;
+                //db.close();//not recommended
+                resolve(res);
+            });
+        });
+    });
+}
 //save image files
 //exports.saveImageDocuments = function saveImageDocuments(){
     //not worth as it can be saved into a hard drive

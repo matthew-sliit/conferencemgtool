@@ -5,7 +5,7 @@
   "main": "index.js",
   "config": {
     "port": 1235,
-    "localhost": "http://localhost:3000/",
+    "localhost": "http://localhost:3000",
     "server-http": "",
     "server-https": ""
   },
@@ -17,11 +17,14 @@
   "author": "EagleEye",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-beta.2",
     "@parcel/transformer-sass": "^2.0.0-beta.2",
     "jest": "^27.0.4",
     "parcel": "^2.0.0-beta.2"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
     "js-cookie": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

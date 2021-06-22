@@ -1,4 +1,4 @@
-function dropdownHover(show, toggler_id, dropdown_id){
+exports.dropdownHover = function dropdownHover(show, toggler_id, dropdown_id){
     // profile-img profile-dropdown
     let toggler = document.getElementById(toggler_id);
     let dropdown = document.getElementById(dropdown_id);

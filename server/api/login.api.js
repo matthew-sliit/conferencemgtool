@@ -20,6 +20,7 @@ exports.Login = class Login{
     loadFromDB(obj){
         this.login_id=obj._id.toString();
         this.username=obj.username;
+        this.role=obj.role;
         this.#password=obj.password;
     }
     setPassword(password){
