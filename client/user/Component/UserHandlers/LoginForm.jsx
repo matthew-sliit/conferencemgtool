@@ -14,7 +14,7 @@ export default class LoginForm extends React.Component{
     redirectToSignUp(){
         window.location.href = "/sign-up";
     }
-    //TODO: get userid from server
+
     async handleLogin(){
         const username = this.username.value;
         let loginData = {"username":username,"password":this.password.value};

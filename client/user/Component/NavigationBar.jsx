@@ -16,11 +16,14 @@ export default class NavigationBar extends React.Component{
         this.getEditorNavigations=this.getEditorNavigations.bind(this);
         this.getUserNavigations=this.getUserNavigations.bind(this);
     }
+    //Navigation buttons for each user type
     getAdminNavigations(){
         return <React.Fragment>
             <NavigateItemHolder path={"/admin/dashboard"} name={"Dashboard"}/>
-            <NavigateItemHolder path={"/admin/contents"} name={"Content Edits"}/>
-            <NavigateItemHolder path={"/admin/uam"} name={"User manager"}/>
+            <NavigateItemHolder path={"/admin/conference"} name={"Conference Details"}/>
+            <NavigateItemHolder path={"/admin/res"} name={"Conference Resources"}/>
+            <NavigateItemHolder path={"/admin/uam"} name={"Add Users"}/>
+            <NavigateItemHolder path={"/admin/uac"} name={"UAC"}/>
         </React.Fragment>;
     }
     getEditorNavigations(){

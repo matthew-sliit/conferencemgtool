@@ -36,6 +36,7 @@ export default class Profile extends React.Component{
             this.setState({server_msg:"Current password is required to make changed!"});
             return;
         }
+        console.log("sending profile: "+JSON.stringify(this.bundleUserDetails(confirm_password)));
         await fetch(resources.proxy("/profile/"+userid),{
             method:'put',
             headers:{'Content-Type':'application/json'},
@@ -43,7 +44,7 @@ export default class Profile extends React.Component{
         }).then(r=>r.text()).then(d=>this.setState({server_msg:d})).catch(e=>console.log(e));
         const server_msg = this.state.server_msg;
         if(server_msg==="success"){
-            this.fetchProfileFromServer();
+            await this.fetchProfileFromServer();
         }
     }
     bundleUserDetails(confirm_password){

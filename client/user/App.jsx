@@ -8,8 +8,8 @@ import Profile from "./Component/UserHandlers/Profile";
 //sub routes
 import AdminRouter from "./Component/Admin/ARouter";
 import EditorRouter from "./Component/Editor/ERouter";
-import GenericUserRouter from "./Component/User/RRouter";
-import ReviewRouter from "./Component/Reviewer/CRouter";
+import GenericUserRouter from "./Component/User/URouter";
+import ReviewRouter from "./Component/Reviewer/RRouter";
 export default () =>{
     return <Router>
         <Switch>
