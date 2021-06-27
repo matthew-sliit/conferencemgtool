@@ -1,5 +1,5 @@
 import React from "react";
-export default function AddNewUserTypeHtml(type){
+export default function AddNewUserTypeHtml(type, onClickFunction){
     return <table>
         <thead>
         <tr><th></th><th></th></tr>
@@ -10,8 +10,8 @@ export default function AddNewUserTypeHtml(type){
         </tr>
         <tr>
             <td>User Email</td>
-            <td><input type="text" placeholder="Enter user email"/>
-                <button className="mx-1">Add</button>
+            <td><input type="text" placeholder="Enter user email" id={"user_email"}/>
+                <button className="mx-1" onClick={()=>onClickFunction('user_email',type)}>Add</button>
             </td>
         </tr>
         <tr>
@@ -19,11 +19,11 @@ export default function AddNewUserTypeHtml(type){
         </tr>
         <tr>
             <td>Username</td>
-            <td><input type="text" disabled/></td>
+            <td><input type="text" id={"admin_show_username"} disabled/></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><input type="text" disabled/>
+            <td><input type="text" id={"admin_show_password"} disabled/>
                 <button className="mx-1">copy</button>
             </td>
         </tr>

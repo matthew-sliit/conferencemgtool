@@ -60,7 +60,7 @@ router.post('/sign-up',async context=>{
             if (usersFromDB.length > 0) {
                 for (i = 0; i < usersFromDB.length; i++) {
                     if (usersFromDB[0].role === profile.role) {
-                        context.response.body = "Account with same username exists!";
+                        context.response.body = "Account with same email already exists!";
                     }
                 }
             } else {
