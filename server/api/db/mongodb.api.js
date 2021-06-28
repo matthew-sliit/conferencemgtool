@@ -138,7 +138,7 @@ exports.updateDocument = async function updateDocument(id, filterFor, filter, up
             //computed property
             let query = {[filterFor]: filter};
             let set_update={$set:updated_obj};
-            console.log("update document{" + id + "} with [" + JSON.stringify(updated_obj) + "]");
+            //console.log("update document{" + id + "} with [" + JSON.stringify(updated_obj) + "]");
             dbo.collection(id).updateOne(query, set_update, function (err, res) {
                 if (err) throw err;
                 //console.log("mongodb update result: " + JSON.stringify(res));

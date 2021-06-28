@@ -1,10 +1,9 @@
 import React from "react";
-
-export default class EDashboard extends React.Component{
+export default class RDashboard extends React.Component{
     constructor(props) {
         super(props);
     }
     render() {
-        return <p>TODO</p>
+        return <p>Dashboard TODO</p>;
     }
 }
