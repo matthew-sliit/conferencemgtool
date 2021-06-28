@@ -60,11 +60,14 @@ export default class ReviewPapers extends React.Component{
                 <button className={"btn btn-warning mx-1"} onClick={this.onClickAction.bind(this,paper._id,'reject')}>Reject</button></React.Fragment>;
             records.push(<tr key={paper._id}><td>{paper._id}</td><td><a href={paper.file_base64}>{paper.paper_topic}</a></td><td>{paper.paper_authors}</td><td>{paper.status}</td><td>{operations}</td></tr>);
         });
-        return <table className={"table"}>
-            <thead><tr><th>Proposal ID</th><th>Workshop</th><th>Authors</th><th>Status</th><th>Operation</th></tr></thead>
-            <tbody>
-            {records}
-            </tbody>
-        </table>
+        return <React.Fragment>
+            <h5>Conference Papers</h5>
+            <table className={"table"}>
+                <thead><tr><th>Paper ID</th><th>Paper</th><th>Authors</th><th>Status</th><th>Operation</th></tr></thead>
+                <tbody>
+                {records}
+                </tbody>
+            </table>
+        </React.Fragment>
     }
 }

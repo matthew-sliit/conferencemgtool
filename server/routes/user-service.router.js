@@ -6,6 +6,7 @@ const saveDocument = require('../api/db/mongodb.api').saveDocument;
 const saveDocumentGetId = require('../api/db/mongodb.api').saveDocumentGetId;
 const readDocument = require('../api/db/mongodb.api').readDocument;
 const readAllDocuments = require('../api/db/mongodb.api').readAllDocuments;
+const countOfDocuments = require("../api/db/mongodb.api").countOfDocuments;
 const router = new Router({
     prefix:'/user'
 });
@@ -60,6 +61,18 @@ router.get("/attendee/:id",async ctx=>{
         }
     )
 })
+router.get("/count/:type", async ctx=>{
+    const type = ctx.request.params.type;
+    ctx.response.set('content-type','application/json');
+    if(type==="author"){
+        await countOfDocuments(Paper.AUTHORCOLLECTION).then(
+            function (res){
+                console.log(JSON.stringify(res));
+            }
+        )
+    }
+    ctx.body = "success";
+});
 //=================== ADD PAPERS BASED ON USERID ===================
 router.put("/author/:id",async ctx=>{
     //fields {userid, paper_authors, paper_topic, file_base64}

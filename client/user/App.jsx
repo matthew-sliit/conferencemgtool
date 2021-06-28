@@ -34,6 +34,9 @@ export default () =>{
             <Route path={"/rev"}>
                 <ReviewRouter/>
             </Route>
+            <Route path={"/reviewer"}>
+                <ReviewRouter/>
+            </Route>
             <Route path={"/user"}>
                 <GenericUserRouter/>
             </Route>

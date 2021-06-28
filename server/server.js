@@ -10,6 +10,7 @@ const ProfileRoutes = require('./routes/profile.router').ProfileRouter;
 const AdminRoutes = require('./routes/admin.router').AdminRouter;
 const OtherUsers = require('./routes/user-service.router').UserServices;
 const EditorRoutes = require('./routes/editor.router').EditorRouter;
+const ChartMethodsRouter = require('./routes/counter.router').ChartMethodsRouter;
 //setup server
 const server = new Koa();
 //attach to server
@@ -22,6 +23,7 @@ server.use(bodyparser())
     .use(AdminRoutes.routes()).use(AdminRoutes.allowedMethods())
     .use(OtherUsers.routes()).use(OtherUsers.allowedMethods())
     .use(EditorRoutes.routes()).use(EditorRoutes.allowedMethods())
+    .use(ChartMethodsRouter.routes()).use(ChartMethodsRouter.allowedMethods())
     .use(context=>{
         //where the request is to an invalid endpoint
         context.body="Access Denied!";

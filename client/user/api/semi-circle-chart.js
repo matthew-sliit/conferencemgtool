@@ -13,6 +13,11 @@ class SemiCircleChart{
         this.filler_steps = 3;
         this.filler_timing = 20;
     }
+    setTriColor(normal,mid,end){
+        this.chart_filling_color = normal;
+        this.chart_filling_color_warn = mid;
+        this.chart_filling_color_danger = end;
+    }
     setBorderRGBA(red,green,blue,alpha){
         this.chart_border_color = "rgba("+red+","+green+","+blue+","+alpha+")";
     }

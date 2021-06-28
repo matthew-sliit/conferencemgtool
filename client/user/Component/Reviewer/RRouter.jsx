@@ -7,7 +7,13 @@ import ReviewPapers from "./ReviewPapers";
 export default () => {
     return <Router>
         <Switch>
+            <Route exact path={"/reviewer"}>
+                <RDashboard/>
+            </Route>
             <Route exact path={"/rev"}>
+                <RDashboard/>
+            </Route>
+            <Route exact path={"/rev/dashboard"}>
                 <RDashboard/>
             </Route>
             <Route exact path={"/rev/proposals"}>

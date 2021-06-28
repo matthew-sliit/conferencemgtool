@@ -167,3 +167,21 @@ exports.updateDocumentWithQuery = async function updateDocumentWitQuery(id, quer
         });
     });
 }
+exports.countOfDocuments = async function countOfDocuments(id){
+    return new Promise((resolve)=> {
+        mongodbClient.connect(url, function (err, db) {
+            if (err) throw err;
+            const dbo = db.db(database);
+            //computed property
+            //let query = {[filterFor]: filter};
+            //let set_update={$set:updated_obj};
+            //console.log("updating document{" + id + "} with [" + JSON.stringify(updated_obj) + "]");
+            dbo.collection(id).count(function (err, res) {
+                if (err) throw err;
+                //console.log("mongodb update result: " + JSON.stringify(res));
+                //db.close();//not recommended
+                resolve(res);
+            });
+        });
+    });
+}
