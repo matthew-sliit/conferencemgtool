@@ -17,4 +17,7 @@ exports.Paper = class Paper{
     change(obj){
         Object.assign(this,obj);
     }
+    addPayment(){
+        this.payment = "paid";
+    }
 }

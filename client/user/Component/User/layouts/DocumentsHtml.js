@@ -12,10 +12,11 @@ export default function DocumentsHtml(type,role,documents,onClickUpload, error){
         }
         let docLinkBlob =  new Blob([view], {type: "application/pdf"});
         let link = window.URL.createObjectURL(docLinkBlob);
-        let buttonPayment = <button className={"btn btn-success"}>Add Payment</button>;
+
+        let buttonPayment = <button className={"btn btn-success"} onClick={()=>{window.location.href="/user/payment/"+doc._id+"."+role}}>Add Payment</button>;
         let paymentOption = "";
         if(role!=="WORKSHOP-PRESENTER"){
-            paymentOption = <td>{doc.payment==="paynow"?buttonPayment:doc.payment}</td>;;
+            paymentOption = <td>{doc.payment==="pending"&&doc.status==="accept"?buttonPayment:doc.payment}</td>;;
         }
         records.push(<tr><td>{doc._id}</td><td><a href={link}>{doc.paper_topic}</a></td><td>{doc.paper_authors}</td><td>{doc.status}</td>{paymentOption}</tr>);
         //<tr><td>1</td><td><a href="#">Paper</a></td><td>On-Review</td></tr>

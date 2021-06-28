@@ -25,6 +25,9 @@ exports.Login = class Login{
         this.username=obj.username;
         this.role=obj.role;
         this.#password=obj.password;
+        if(typeof obj.ban !== "undefined"){
+            this.ban = obj.ban;
+        }
     }
     setPassword(password){
         this.#password =this.#getSHA256Hex(password);

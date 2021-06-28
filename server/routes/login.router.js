@@ -29,6 +29,12 @@ router.post('/',async (context)=>{
             let login = new Login();
             login.loadFromDB(userFromDB[0]);
             //console.log("loaded: "+JSON.stringify(login.getSaveToDB()));
+            if(typeof login.ban !== "undefined"){
+                if(login.ban==="Banned"){
+                    context.response.body = "Your Account has been banned!";
+                    return;
+                }
+            }
             if (login.passwordIsValid(password)) {
                 context.response.body = "success."+login.login_id;
             } else {

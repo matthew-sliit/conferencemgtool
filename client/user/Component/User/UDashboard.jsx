@@ -70,7 +70,7 @@ export default class UDashboard extends React.Component{
     }
     async addPaymentToServer(type){
         const userid = this.state.userid;
-        await fetch(resources.proxy("/user/"+type+"/"+userid),{
+        await fetch(resources.proxy("/user/payment/"+type+"/"+userid),{
             method:'put'
         }).then(r=>r.text()).then(d=>this.setState({server_msg:JSON.parse(d)})).catch(e=>console.log(e));
     }
@@ -105,7 +105,20 @@ export default class UDashboard extends React.Component{
         return DocumentsHtml("Workshop Paper",role,papers,this.onClickUploadFile,error);
     }
     getAttendeeLayout(error){
-        return <p>Attendee TODO</p>;
+        const payment = this.state.payments;
+        let content = [];
+        const username = this.state.username;
+        const userid = this.state.userid;
+        if(payment.length>0){
+            content.push(<p>Successfully Registered,<br/><b>Ticket ID: </b>{username}<b><br/>Ref ID:</b>{userid}</p>)
+        }else{
+            let paymentLink = "/user/payment/"+userid+"."+"ATTENDEE";
+            content.push(<button className={"btn btn-outline-success"} onClick={()=>window.location.href=paymentLink}>Add Payment</button>);
+        }
+        return <React.Fragment>
+            <h5>Conference Attendee Registration</h5>
+            {content}
+        </React.Fragment>;
     }
     render() {
         const role = this.state.role;

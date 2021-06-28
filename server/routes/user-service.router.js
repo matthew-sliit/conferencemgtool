@@ -10,10 +10,11 @@ const router = new Router({
     prefix:'/user'
 });
 const Paper = require("../api/paper.api").Paper;
+const Payment = require("../api/payment.api").Payment;
 router.get("/author/:id",async ctx=>{
     const userid = ctx.request.params.id;
     ctx.response.set('content-type','application/json');
-    console.log("id:"+userid);
+    //console.log("id:"+userid);
     if(userid==="default"){
         await readAllDocuments(Paper.AUTHORCOLLECTION).then(
             function (res){
@@ -50,6 +51,15 @@ router.get("/workshop/:id", async ctx=>{
         );
     }
 });
+router.get("/attendee/:id",async ctx=>{
+    const userid = ctx.request.params.id;
+    ctx.response.set('content-type','application/json');
+    await readDocument(Payment.COLLECTION,"userid",userid).then(
+        function (res){
+            ctx.body = res;
+        }
+    )
+})
 //=================== ADD PAPERS BASED ON USERID ===================
 router.put("/author/:id",async ctx=>{
     //fields {userid, paper_authors, paper_topic, file_base64}
@@ -101,7 +111,7 @@ router.put("/review/author/:id", async ctx=>{
 router.put("/review/workshop/:id", async ctx=>{
     const paper_id = ctx.request.params.id;
     const action = ctx.request.body.action;
-    console.log("paper_id:"+paper_id + " action:"+action);
+    //console.log("paper_id:"+paper_id + " action:"+action);
     let workshopPaper = new Paper();
     const id = new mongo.ObjectId(paper_id);
     await readDocument(Paper.WORKSHOPCOLLECTION,"_id",id).then(
@@ -113,6 +123,40 @@ router.put("/review/workshop/:id", async ctx=>{
     workshopPaper.status = action;
     //console.log(JSON.stringify(workshopPaper.paper_topic));
     await updateDocument(Paper.WORKSHOPCOLLECTION,"_id",id,workshopPaper);
+    ctx.response.set('content-type','application/json');
+    ctx.body = "success";
+});
+//============== NO PAYMENTS FOR WORKSHOPS ===================
+router.put("/payment/author/:id",async ctx=>{
+    const paper_id = ctx.request.params.id;
+    const mongoId = new mongo.ObjectId(paper_id);
+    let paper = new Paper();
+    await readDocument(Paper.AUTHORCOLLECTION,"_id",mongoId).then(
+        function (res){
+            paper.change(res[0]);
+        }
+    )
+    paper.addPayment();
+    await updateDocument(Paper.AUTHORCOLLECTION,"_id",mongoId,paper.getSaveToDb());
+    ctx.response.set('content-type','application/json');
+    ctx.body = "success";
+});
+
+router.put("/payment/attendee/:id",async ctx=>{
+    const userid = ctx.request.params.id;
+    //const mongoId = new mongo.ObjectId(userid);
+    let result = null;
+    await readDocument(Payment.COLLECTION,"userid",userid).then(
+        function (res){
+            result = res;
+        }
+    )
+    if(result.length===0){
+        let payment = new Payment();
+        payment.userid = userid;
+        payment.amount = "3500";
+        saveDocument(Payment.COLLECTION,[payment.getSaveToDb()]);
+    }
     ctx.response.set('content-type','application/json');
     ctx.body = "success";
 });
