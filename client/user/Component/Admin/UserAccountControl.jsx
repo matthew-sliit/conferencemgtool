@@ -10,6 +10,7 @@ export default class UserAccountControl extends React.Component{
         }
         this.fetchAllUsers=this.fetchAllUsers.bind(this);
         this.filterUsers=this.filterUsers.bind(this);
+        this.applyUserBan=this.applyUserBan.bind(this);
     }
     componentDidMount() {
         this.fetchAllUsers();
@@ -19,14 +20,36 @@ export default class UserAccountControl extends React.Component{
             method:'get',
         }).then(r=>r.text()).then(d=>this.setState({usersFromDb:JSON.parse(d)})).catch(e=>console.log(e));
         const usersFromDb = this.state.usersFromDb;
-        console.log(JSON.stringify(usersFromDb));
+        //console.log(JSON.stringify(usersFromDb));
         this.setState({showUsers:[...usersFromDb]});
+    }
+    async applyUserBan(userid){
+        let server_msg = null;
+        await fetch(resources.proxy("/admin/user/ban/"+userid),{
+            method:'put',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({"ban":true})
+        }).then(r=>r.text()).then(d=>server_msg=d).catch(e=>console.log(e));
+        if(server_msg==="success"){
+            await this.fetchAllUsers();
+        }
+    }
+    async unBanUser(userid){
+        let server_msg = null;
+        await fetch(resources.proxy("/admin/user/ban/"+userid),{
+            method:'put',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({"ban":false})
+        }).then(r=>r.text()).then(d=>server_msg=d).catch(e=>console.log(e));
+        if(server_msg==="success"){
+            await this.fetchAllUsers();
+        }
     }
     filterUsers(){
         const byUsername = this.search_username.value;
         const byEmail = this.search_email.value;
         const byRole = this.search_role.value;
-        let showUsers = this.state.showUsers;
+        let showUsers = [];
         const usersFromDb = this.state.usersFromDb;
         let u = false, e = false, r = false, pushed = false;
         if(byUsername.length>0){
@@ -35,7 +58,7 @@ export default class UserAccountControl extends React.Component{
         if(byEmail.length>0){
             e = true;
         }
-        if(byRole.length>0){
+        if(byRole.length>0 && byRole!=="Select"){
             r = true;
         }
         usersFromDb.map(user =>{
@@ -53,6 +76,9 @@ export default class UserAccountControl extends React.Component{
                 pushed = true;
             }
         })
+        if(!u&&!e&&!r){
+            showUsers = [...usersFromDb];
+        }
         this.setState({showUsers:showUsers});
     }
     render() {
@@ -60,6 +86,14 @@ export default class UserAccountControl extends React.Component{
         let records = [];
         if(showUsers.length>0){
             showUsers.map(user =>{
+                //console.log(JSON.stringify(user));
+                let userBanned = null;
+                if(typeof user.status !== "undefined"){
+                    if(user.status === "Banned") {
+                        userBanned = <button className="btn btn-outline-primary m-lg-1"
+                                             onClick={this.unBanUser.bind(this, user._id)}>Unban</button>;
+                    }
+                }
               records.push(<tr>
                   <td><b>{user.username}</b></td>
                   <td>{user.email}</td>
@@ -67,8 +101,8 @@ export default class UserAccountControl extends React.Component{
                   <td>{user.mobile1}<p/>{user.mobile2}</td>
                   <td>{user.role}</td>
                   <td>
-                      <button className="btn btn-danger m-lg-1">Ban</button>
-                      <button className="btn btn-danger m-lg-1">Remove User</button>
+                      <button className="btn btn-danger m-lg-1" onClick={this.applyUserBan.bind(this,user._id)}>Ban</button>
+                      {userBanned}
                       <button className="btn btn-warning">Password Reset</button>
                   </td>
               </tr>);
@@ -86,16 +120,16 @@ export default class UserAccountControl extends React.Component{
                     <input type="text" placeholder="User Email" ref={(ref) => {this.search_email = ref}}/>
                     <select className="mx-1" ref={(ref) => {this.search_role = ref}}>
                         <option>Select</option>
-                        <option>Admin</option>
-                        <option>Editor</option>
-                        <option>Reviewer</option>
-                        <option>Presenter</option>
-                        <option>Author</option>
-                        <option>Attendee</option>
+                        <option value={"ADMIN"}>Admin</option>
+                        <option value={"EDITOR"}>Editor</option>
+                        <option value={"REVIEWER"}>Reviewer</option>
+                        <option value={"WORKSHOP-PRESENTER"}>Presenter</option>
+                        <option value={"RESEARCHER"}>Author</option>
+                        <option value={"ATTENDEE"}>Attendee</option>
                     </select>
                 </div>
                 <div style={{display: "table-cell"}}>
-                    <button className="btn btn-success">Search</button>
+                    <button className="btn btn-success" onClick={this.filterUsers}>Search</button>
                 </div>
             </div>
             <p/>

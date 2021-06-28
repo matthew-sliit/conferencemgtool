@@ -15,6 +15,9 @@ exports.Login = class Login{
         return crypto_hash.createHash('sha256').update(password).digest('hex');
     }
     getSaveToDB(){
+        if(typeof this.status !== "undefined"){
+            return {"username":this.username,"password":this.#password,"role":this.role,"ban":this.status};
+        }
         return {"username":this.username,"password":this.#password,"role":this.role};
     }
     loadFromDB(obj){

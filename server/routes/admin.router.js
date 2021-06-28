@@ -10,6 +10,7 @@ const readAllDocuments = require('../api/db/mongodb.api').readAllDocuments;
 const usernameGen = require('../api/util/username-generator');
 const passwordGen = require('../api/util/password-generator');
 const CSV_Worker = require('../api/worker/csv-worker.js');
+const {updateDocument} = require("../api/db/mongodb.api");
 //model classes
 const Login = require('../api/login.api').Login;
 const Profile = require('../api/profile.api').Profile;
@@ -84,10 +85,37 @@ router.get("/",async ctx=>{
             function (login_data){
                 //console.log(JSON.stringify(login_data[0].username));
                 profileS[i]["username"] = login_data[0].username;
+                if(typeof login_data[0].ban !== "undefined"){
+                    profileS[i]["status"] = login_data[0].ban;
+                }
             }
         )
     }
     //console.log(JSON.stringify(profileS));
     ctx.body = profileS;
 });
+
+router.put("/user/ban/:id",async ctx=>{
+    const userid = ctx.request.params.id;
+    const ban = ctx.request.body.ban;
+    let login = new Login();
+    const mongoId = new mongo.ObjectId(userid);
+    await readDocument(Login.COLLECTION,"_id",mongoId).then(
+        function (res){
+            login.loadFromDB(res[0]);
+        }
+    )
+    //console.log("ban: "+ban);
+    if(ban){
+        login["status"]="Banned";
+    }else{
+        login["status"]="Unbanned";
+    }
+    await updateDocument(Login.COLLECTION,"_id",mongoId,login.getSaveToDB());
+    //console.log(JSON.stringify(login));
+    ctx.response.set('content-type','application/json');
+    ctx.body = "success";
+
+});
+
 exports.AdminRouter=router;
