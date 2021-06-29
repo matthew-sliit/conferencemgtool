@@ -30,7 +30,7 @@ export default class WorkshopMain extends React.Component {
                         <form method="#" ref={(ref) => {this.form = ref}}  action="#">
 
 
-                            <h3>Send Us a Message</h3>
+                            <h3>We want to hear from you</h3>
                             {submit!==null?"Message sent":""}
                             <div class="row">
 

@@ -61,10 +61,10 @@ export default class ReviewPapers extends React.Component{
             records.push(<tr key={paper._id}><td>{paper._id}</td><td><a href={paper.file_base64}>{paper.paper_topic}</a></td><td>{paper.paper_authors}</td><td>{paper.status}</td><td>{operations}</td></tr>);
         });
         return <React.Fragment>
-            <h5>Conference Papers</h5>
+            <h4>List Of Conference Papers</h4><br/>
             <table className={"table"}>
-                <thead><tr><th>Paper ID</th><th>Paper</th><th>Authors</th><th>Status</th><th>Operation</th></tr></thead>
-                <tbody>
+                <thead><tr className="table-warning"><th>Paper ID</th><th>Paper</th><th>Authors</th><th>Status</th><th>Operation</th></tr></thead>
+                <tbody className="table-primary">
                 {records}
                 </tbody>
             </table>
