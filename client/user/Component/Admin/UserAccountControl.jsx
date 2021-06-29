@@ -1,9 +1,11 @@
 import React from "react";
 import resources from "../../resource.config";
+import Cookies from "js-cookie";
 export default class UserAccountControl extends React.Component{
     constructor(props) {
         super(props);
         this.state={
+            userid:Cookies.get('userid',null),
             usersFromDb:[],
             showUsers:[],
             server_msg:null
@@ -11,6 +13,7 @@ export default class UserAccountControl extends React.Component{
         this.fetchAllUsers=this.fetchAllUsers.bind(this);
         this.filterUsers=this.filterUsers.bind(this);
         this.applyUserBan=this.applyUserBan.bind(this);
+        this.resetUserPassword=this.resetUserPassword.bind(this);
     }
     componentDidMount() {
         this.fetchAllUsers();
@@ -43,6 +46,19 @@ export default class UserAccountControl extends React.Component{
         }).then(r=>r.text()).then(d=>server_msg=d).catch(e=>console.log(e));
         if(server_msg==="success"){
             await this.fetchAllUsers();
+        }
+    }
+    async resetUserPassword(username,userid){
+        let server_msg = null;
+        await fetch(resources.proxy("/admin/user/reset/"+userid),{
+            method:'put',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({})
+        }).then(r=>r.text()).then(d=>server_msg=d).catch(e=>console.log(e));
+        server_msg = server_msg.split(".");
+        if(server_msg[0]==="success"){
+            await this.fetchAllUsers();
+            this.setState({server_msg:"user with username:"+username+" new password:"+server_msg[1]});
         }
     }
     filterUsers(){
@@ -83,6 +99,7 @@ export default class UserAccountControl extends React.Component{
     }
     render() {
         const showUsers = this.state.showUsers;
+        const adminUserid = this.state.userid;
         let records = [];
         if(showUsers.length>0){
             showUsers.map(user =>{
@@ -94,21 +111,29 @@ export default class UserAccountControl extends React.Component{
                                              onClick={this.unBanUser.bind(this, user._id)}>Unban</button>;
                     }
                 }
-              records.push(<tr>
-                  <td><b>{user.username}</b></td>
-                  <td>{user.email}</td>
-                  <td style={{width: "200px"}}>{user.address}</td>
-                  <td>{user.mobile1}<p/>{user.mobile2}</td>
-                  <td>{user.role}</td>
-                  <td>
-                      <button className="btn btn-danger m-lg-1" onClick={this.applyUserBan.bind(this,user._id)}>Ban</button>
-                      {userBanned}
-                      <button className="btn btn-warning">Password Reset</button>
-                  </td>
-              </tr>);
-            })
+                if(user._id!==adminUserid) {
+                    records.push(<tr>
+                        <td><b>{user.username}</b></td>
+                        <td>{user.email}</td>
+                        <td style={{width: "200px"}}>{user.address}</td>
+                        <td>{user.mobile1}<p/>{user.mobile2}</td>
+                        <td>{user.role}</td>
+                        <td>
+                            <button className="btn btn-danger m-lg-1"
+                                    onClick={this.applyUserBan.bind(this, user._id)}>Ban
+                            </button>
+                            {userBanned}
+                            <button className="btn btn-warning"
+                                    onClick={this.resetUserPassword.bind(this, user.username, user._id)}>Password Reset
+                            </button>
+                        </td>
+                    </tr>);
+                }
+            });
         }
+        const sever_msg = this.state.server_msg;
         return <React.Fragment>
+            {sever_msg!=="success"&&sever_msg!==null?sever_msg:""}
             <h6>Search Criteria</h6>
             <div className="p-2" style={{border: "1px solid green", width: "700px"}}>
                 <div style={{display: "table-cell"}}>

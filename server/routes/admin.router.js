@@ -118,4 +118,20 @@ router.put("/user/ban/:id",async ctx=>{
 
 });
 
+router.put("/user/reset/:id", async ctx=>{
+    const userid = ctx.request.params.id;
+    let login = new Login();
+    const mongoId = new mongo.ObjectId(userid);
+    await readDocument(Login.COLLECTION,"_id",mongoId).then(
+        function (res){
+            login.loadFromDB(res[0]);
+        }
+    )
+    let new_password = passwordGen.generatePassword()
+    //console.log("uid:"+userid+" p:"+new_password);
+    login.setPassword(new_password);
+    await updateDocument(Login.COLLECTION,"_id",mongoId,login.getSaveToDB());
+    ctx.response.set('content-type','application/json');
+    ctx.body = "success."+new_password;
+})
 exports.AdminRouter=router;
