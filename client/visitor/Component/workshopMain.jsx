@@ -41,10 +41,12 @@ export default class WorkshopMain extends React.Component {
                 <div className="card">
                     <div className="card-body">
                         <div className="section-header">
-                            <h2 class="text-primary">Workshops</h2>
+                            <div className="container about-title clearfix mx-auto">
+                                <h1><span>Workshops</span></h1><br/>
+                            </div>
                         </div>
                         <p>Following is the list of workshops, which will be organized as a part of ICAF 2021. </p>
-                        <p><b>Registration Deadline: </b>{submissionDeadline!==null?new Date(submissionDeadline).toString():" To be informed"}</p>
+                        <p><b>Registration Deadline: </b>{submissionDeadline!==null && submissionDeadline!==""? new Date(submissionDeadline).toString():" To be informed"}</p>
                         {workshops.map(workshop=>{
                             return <WorkshopListItem workshop={workshop}/>
                         })}

@@ -2,12 +2,13 @@
 	background: linear-gradient(rgba(62, 63, 64, 0.6), rgba(62, 63, 64, 0.6));
   background-image: url("../conbg.jpg");
   background-color: #5200ad ;
-  width: 100%
+  width: 75%
   
 }
 .contact-form{
     background:#FFF0F5;
     margin-left: 50px;
+    margin-top: 30px;
     width: 100%;
 }
 .contact-form .form-control{
@@ -17,7 +18,7 @@
     text-align: center;
 }
 .contact-image img{
-    border-radius: 8rem;
+    border-radius: 6rem;
     width: 11%;
     margin-top: -3%;
     transform: rotate(29deg);
@@ -32,7 +33,7 @@
     margin-bottom: 8%;
     margin-top: -10%;
     text-align: center;
-    color: #730099;
+    color: #1E90FF;
 }
 .contact-form .btnContact {
     width: 50%;
