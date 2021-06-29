@@ -14,7 +14,7 @@ export default class Home extends React.Component {
 
     render() {
         return <React.Fragment>
-            <div id="content" className="position-relative top-0 start-0">
+            <div id="content" className="position-relative">
                 <header>
 
                     <div
