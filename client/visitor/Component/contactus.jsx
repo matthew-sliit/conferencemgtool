@@ -1,14 +1,23 @@
 import React from 'react';
-import './assets/css/contactus.css';
+import '../assets/css/contactus.css';
 
 export default class WorkshopMain extends React.Component {
     constructor(props) {
         super(props);
+        this.state={submit:null}
+        this.onformsubmit=this.onformsubmit.bind(this);
+    }
+    componentDidMount() {
+        this.form.addEventListener("click",function (event){event.preventDefault()});
     }
 
+    onformsubmit(){
+
+    }
     render() {
+        const submit=this.state.submit;
         return <React.Fragment>
-.
+
             <div id="content" className="position-relative ">
                 <div class="row">
 
@@ -18,22 +27,22 @@ export default class WorkshopMain extends React.Component {
                             <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="image"/>
                         </div>
 
-                        <form method="post">
+                        <form method="#" ref={(ref) => {this.form = ref}}  action="#">
 
 
                             <h3>Send Us a Message</h3>
-
+                            {submit!==null?"Message sent":""}
                             <div class="row">
 
                                 <div class="form-group">
-                                    <input type="text" name="txtName" class="form-control" placeholder="Your Name *"  value="" /><br/>
+                                    <input type="text" name="txtName" class="form-control" placeholder="Your Name *"  defaultValue="" /><br/>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" /><br/>
+                                    <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" defaultValue="" /><br/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" /><br/>
+                                    <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" defaultValue="" /><br/>
                                 </div>
 
 
@@ -42,7 +51,7 @@ export default class WorkshopMain extends React.Component {
                                   <br/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                                    <input type="submit"  onClick={()=>{this.setState({submit:true})}} name="btnSubmit" class="btnContact" value="Send Message" />
                                 </div>
 
 

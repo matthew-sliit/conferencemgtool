@@ -1,5 +1,5 @@
 import React from 'react';
-import picture from 'url:./assets/workshopguidelines.png'
+import picture from 'url:../assets/workshopguidelines.png'
 
 export default class WorkshopSubmission extends React.Component {
     constructor(props) {
