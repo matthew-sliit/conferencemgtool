@@ -2,6 +2,7 @@ import React from "react";
 import {UserRoles} from "../../api/roles";
 import resources from "../../resource.config";
 import Cookies from 'js-cookie';
+import Footer from "../Footer";
 export default class LoginForm extends React.Component{
     constructor(props) {
         super(props);
@@ -58,6 +59,7 @@ export default class LoginForm extends React.Component{
             <button onClick={this.redirectToSignUp}>Register</button>
             <br/>
             <a href={"/forgot-password"}>Forgot Password</a>
+            <Footer/>
         </React.Fragment>
     }
 }

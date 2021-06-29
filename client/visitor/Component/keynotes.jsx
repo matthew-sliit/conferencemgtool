@@ -2,13 +2,26 @@ import React from "react";
 import '../../shared/assets/css/home.css';
 import '../../shared/assets/css/home-page-design.css';
 import img1 from 'url:../../shared/assets/img/signup.png';
-
+import resources from "../resource.config";
+import Footer from "./Footer";
 export default class Keynotes extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+            keynotes:[]
+        }
     }
-
+    async componentDidMount() {
+        let conference = null;
+        await fetch(resources.proxy("/editor/conference"),{
+            method:'get'
+        }).then(r=>r.text()).then(d=>{conference=JSON.parse(d)}).catch(e=>console.log(e));
+        console.log(JSON.stringify(conference));
+        this.setState({keynotes:conference.keynotes});
+    }
     render() {
+        const keynotes = this.state.keynotes;
+
         return <React.Fragment>
             <div id="content" className="position-relative">
                 <div className="container about-title clearfix mx-auto">
@@ -20,7 +33,8 @@ export default class Keynotes extends React.Component {
                         <div className="container ">
                             <figure><img src={img1} className="img-responsive mx-auto d-block" alt=""/></figure>
                         </div>
-                        <h3 className="keynote">Prof. Elizabeth Melinda</h3>
+                        {/*<h3 className="keynote">Prof. Elizabeth Melinda</h3>*/}
+                        <h3 className="keynote">{keynotes.length>0?keynotes[0].name:"Prof. Elizabeth Melinda"}</h3>
                         <h5 className="text-center">Department of Psychological Medicine, University of Auckland</h5>
 
 
@@ -59,7 +73,8 @@ export default class Keynotes extends React.Component {
                         <div className="container ">
                             <figure><img src={img1} className="img-responsive mx-auto d-block" alt=""/></figure>
                         </div>
-                        <h3 className="keynote">Prof. B.L. William Wong</h3>
+                        {/*<h3 className="keynote">Prof. B.L. William Wong</h3>*/}
+                        <h3 className={"keynote"}>{keynotes.length>0?keynotes[1].name:"Prof. B.L. William Wong"}</h3>
                         <h5 className="text-center">Middlesex University London</h5>
 
                         <p className="card-text">Prof. B.L. William Wong PhD BCom (Hons) FBCS FNZCS is Professor of Human-Computer Interaction and Head Interaction Design Centre. He is also Principal Scientist at Genetec, Inc. where he is currently on sabbatical to commercialise IP from his team’s research.
@@ -83,7 +98,8 @@ export default class Keynotes extends React.Component {
                         <div className="container ">
                             <figure><img src={img1} className="img-responsive mx-auto d-block" alt=""/></figure>
                         </div>
-                        <h3 className="keynote">Prof. Xiaobo Qu</h3>
+                        {/*<h3 className="keynote">Prof. Xiaobo Qu</h3>*/}
+                        <h3 className="keynote">{keynotes.length>0?keynotes[2].name:"Prof. Xiaobo Qu"}</h3>
                         <h5 className="text-center">Urban Mobility Systems, Architecture and Civil Engineering, Chalmers University of Technology, Sweden</h5>
 
                         <p className="card-text">The forthcoming revolution of transport engineering needs an interdisciplinary perspective between civil engineering,
@@ -97,12 +113,10 @@ export default class Keynotes extends React.Component {
                             the lane to be used by EV through cooperative driving with surrounding connected and automated vehicle platoons.
                             We also predict the way forward for future transport systems.</p>
                     </div>
-
                 </div>
-
                 <br/>
-
             </div>
+            <Footer/>
         </React.Fragment>
     }
 }

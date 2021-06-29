@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../Footer";
 export default function showConferenceDetailsHtml(conferenceObj, savefunction){
     var topicCount_XYZ021 = 2;
     function addNewTopic(){
@@ -6,7 +7,7 @@ export default function showConferenceDetailsHtml(conferenceObj, savefunction){
         label.innerHTML = (++topicCount_XYZ021)+". ";
         let inputTopic = document.createElement("input");
         inputTopic.style.width = "590px";
-        inputTopic.style.marginBottom = "3px";
+        inputTopic.setAttribute("id","ABCDEXX");
         inputTopic.setAttribute("id","t_"+(topicCount_XYZ021));
         inputTopic.placeholder = "Enter topic";
         label.appendChild(inputTopic);
@@ -131,5 +132,6 @@ export default function showConferenceDetailsHtml(conferenceObj, savefunction){
             </tr>
             </tbody>
         </table>
+        <Footer/>
     </React.Fragment>;
 }
