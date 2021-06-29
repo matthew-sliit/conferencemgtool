@@ -1,4 +1,4 @@
 
 exports.generatePassword = function generatePassword(){
-    return "123";
+    return "12v34SoP";
 }

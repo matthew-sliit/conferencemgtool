@@ -56,6 +56,8 @@ export default class LoginForm extends React.Component{
             <p/>
             <button onClick={this.handleLogin}>Login</button> &nbsp;
             <button onClick={this.redirectToSignUp}>Register</button>
+            <br/>
+            <a href={"/forgot-password"}>Forgot Password</a>
         </React.Fragment>
     }
 }

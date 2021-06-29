@@ -5,6 +5,7 @@ import LoginForm from "./Component/UserHandlers/LoginForm";
 import RegisterForm from "./Component/UserHandlers/RegisterForm";
 import SignOut from "./Component/UserHandlers/SignOut";
 import Profile from "./Component/UserHandlers/Profile";
+import PasswordResetForm from "./Component/UserHandlers/PasswordResetForm";
 //sub routes
 import AdminRouter from "./Component/Admin/ARouter";
 import EditorRouter from "./Component/Editor/ERouter";
@@ -24,6 +25,9 @@ export default () =>{
             </Route>
             <Route exact path={"/profile"}>
                 <Profile/>
+            </Route>
+            <Route exact path={"/forgot-password"}>
+                <PasswordResetForm/>
             </Route>
             <Route path={"/admin"}>
                 <AdminRouter/>
