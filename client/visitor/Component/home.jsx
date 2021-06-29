@@ -6,6 +6,7 @@ import con1 from 'url:../../shared/assets/img/con1.jpg';
 import con2 from 'url:../../shared/assets/img/con2.jpg';
 import con3 from 'url:../../shared/assets/img/con3.png';
 import img1 from 'url:../../shared/assets/img/signup.png';
+import Footer from "./Footer";
 import resources from "../resource.config";
 
 export default class Home extends React.Component {
@@ -25,15 +26,23 @@ export default class Home extends React.Component {
         this.setState({endDate:conference.endDate});
     }
     render() {
-        const startDate = this.state.startDate;
-        const endDate = this.state.endDate;
-        let showDates = "To be informed";
-        if(startDate!==""&&endDate!==""){
-            let start = (new Date(startDate)).toString();
+        const startDateISO = this.state.startDate;
+        const endDateISO = this.state.endDate;
+        let showDates = "";
+        if(startDateISO!==""&&endDateISO!==""){
+            let startDate = new Date(startDateISO);
+            let start = startDate.toString();
             let startDateString = start.substring(0,start.indexOf("2021"));
-            let end = new Date(endDate).toString();
+            let endDate = new Date(endDateISO);
+            let end = endDate.toString();
             let endDateString = end.substring(0,end.indexOf("2021"));
-            showDates = ""+startDateString+" to "+endDateString;
+            if(startDate<endDate){
+                showDates = ""+startDateString+" to "+endDateString;
+            }else if(startDateString===endDateString){
+                showDates = ""+startDateString;
+            }else{
+                showDates = "To be informed";
+            }
         }
         return <React.Fragment>
             <div id="content" className="position-relative top-0 start-0">
@@ -216,6 +225,7 @@ export default class Home extends React.Component {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </React.Fragment>
     }
 }
