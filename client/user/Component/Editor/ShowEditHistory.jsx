@@ -30,18 +30,25 @@ export default class ShowEditHistory extends React.Component{
                 <td>{changes[0].field}</td>
                 <td>{JSON.stringify(changes[0].old)}</td>
                 <td>{JSON.stringify(changes[0].new)}</td>
-                <td>{changes[0].approval}</td></tr>);
+                <td style={changes[0].approval==="UNAPPROVED"?{color:"blue"}:(changes[0].approval==="APPROVED"?{color:"green"}:{color:"red"})}>{changes[0].approval}</td></tr>);
             for(let j=1;j<changes.length;j++){
                 records.push(<tr> <td>{changes[j].field}</td>
                     <td>{JSON.stringify(changes[j].old)}</td>
                     <td>{JSON.stringify(changes[j].new)}</td>
-                    <td>{changes[j].approval}</td></tr>);
+                    <td style={changes[j].approval==="UNAPPROVED"?{color:"blue"}:(changes[j].approval==="APPROVED"?{color:"green"}:{color:"red"})}>{changes[j].approval}</td></tr>);
             }
         }
         return <React.Fragment>
             <h5>Conference Edit History</h5>
-            <table className={"table"}>
-                <thead><tr><th>Change ID</th><th>Changed Field</th><th>Previous Value</th><th>New Value</th><th>Status</th></tr></thead>
+            <table className={"table table-striped table-bordered"}>
+                <thead>
+                <tr>
+                    <th>Change ID</th>
+                    <th>Changed Field</th>
+                    <th>Previous Value</th>
+                    <th>New Value</th><th>Status</th>
+                </tr>
+                </thead>
                 <tbody>
                 {records}
                 </tbody>
