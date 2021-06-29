@@ -49,6 +49,8 @@ export default class RegisterForm extends React.Component{
         const server_msg = this.state.server_msg;
         const error_msg = this.state.error_msg;
         return <React.Fragment>
+            <center>
+            <div  style={{backgroundColor: "lightblue"}}>
             <p>{server_msg!==null?server_msg:''}</p>
             <h5>Registration</h5>
             <table>
@@ -72,8 +74,10 @@ export default class RegisterForm extends React.Component{
                 </tr>
                 </tbody>
             </table><p/>
-            <button onClick={this.handleRegister}>Register</button> &nbsp;
-            <button onClick={this.redirectToLogin}>Login</button>
+            <button class="btn btn-primary" onClick={this.handleRegister}>Register</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-success" onClick={this.redirectToLogin}>Login</button>
+            </div>
+           </center>
         </React.Fragment>
     }
 }

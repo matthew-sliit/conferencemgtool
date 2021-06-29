@@ -116,13 +116,36 @@ export default class UDashboard extends React.Component{
             content.push(<button className={"btn btn-outline-success"} onClick={()=>window.location.href=paymentLink}>Add Payment</button>);
         }
         return <React.Fragment>
+            <h3><u>Please Follow the Rules Given Below!</u></h3>
+
+            <h5> *All the attendees should be registered and should pay before attending*</h5>
+
+            <ul>
+                <li>Dress Code</li>
+                <ul>
+                    <li>Female - White blouse with a black skirt or white saree</li>
+                    <li>Male - White shirt with a black trouser</li>
+
+                </ul>
+                <li>Be seated half an hour before the beginning of the conferrence.</li>
+                <li>Get a book or a paper to write down important points.</li>
+                <li>AVOID getting any kind of foods to the conferrence hall.</li>
+                <li>AVOID distractions(Be kind enough to silence your phone while you are in the conferrence).</li>
+
+
+            </ul>
             <h5>Conference Attendee Registration</h5>
             {content}
+
+
         </React.Fragment>;
     }
     render() {
+
         const role = this.state.role;
         const server_msg = this.state.server_msg;
+
+
         let error = null;
         if(server_msg!==null){
             if(server_msg!=="success")
@@ -138,5 +161,6 @@ export default class UDashboard extends React.Component{
         }else{
             return this.getAttendeeLayout(error);
         }
+
     }
 }

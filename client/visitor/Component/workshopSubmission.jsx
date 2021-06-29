@@ -16,7 +16,6 @@ export default class WorkshopSubmission extends React.Component {
                         <img src={picture} alt="" width="500" height="550"/>
                     </div>
                     <div className="col-sm-6">
-                        <h4>Contents</h4>
                            <b>
                             <ol>
                                 <li>Workshop Organizers logo</li>
@@ -51,6 +50,11 @@ export default class WorkshopSubmission extends React.Component {
                                 <li>Website address</li>
                             </ol>
                            </b>
+                        <div className="card">
+                            <div className="card-body">
+                        <h3 className="text-danger">The accepted submission format is Pdf</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

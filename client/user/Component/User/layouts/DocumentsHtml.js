@@ -22,6 +22,28 @@ export default function DocumentsHtml(type,role,documents,onClickUpload, error){
         //<tr><td>1</td><td><a href="#">Paper</a></td><td>On-Review</td></tr>
     });
     return <React.Fragment>
+        <h3><u>Please Follow the Rules Given Below Before Submitting Your Research Paper!</u></h3>
+        <h5> *All accepted and presented full papers to be submitted for publication to the IEEE Xplore*</h5>
+
+        <ul>
+            <li>All papers should be written in English.</li>
+            <li>Maximum length of a paper is limited to 6 printed A4 pages in given format.</li>
+            <li>Use the IEEE template while preparing full research papers.</li>
+
+            <li>Review process is Double-blind. Follow the following instructions in your first submission.</li>
+            <ul>
+                <li>AVOID including any authors’ information such as name, phone number, e-mail, etc.</li>
+                <li>AVOID including any grant information or personal acknowledgements in the initial manuscript (This is a must).</li>
+            </ul>
+
+        </ul>
+        <h5> *Use the following guidelines when submitting full papers*</h5>
+        <ul>
+            <li>All papers should be written according to the given template.</li>
+
+            <li>Remember to login to the system by selecting the correct check box.</li>
+
+        </ul>
         <h6>{type} Submit</h6>
         <div style={{display: "table-cell", width: "590px", border: "1px solid green", padding: "12px"}}>
             {error!==null?error:''}
