@@ -6,13 +6,35 @@ import con1 from 'url:../../shared/assets/img/con1.jpg';
 import con2 from 'url:../../shared/assets/img/con2.jpg';
 import con3 from 'url:../../shared/assets/img/con3.png';
 import img1 from 'url:../../shared/assets/img/signup.png';
+import resources from "../resource.config";
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+            startDate:"",endDate:""
+        }
     }
-
+    async componentDidMount() {
+        let conference = null;
+        await fetch(resources.proxy("/editor/conference"),{
+            method:'get'
+        }).then(r=>r.text()).then(d=>{conference=JSON.parse(d)}).catch(e=>console.log(e));
+        console.log(JSON.stringify(conference));
+        this.setState({startDate:conference.startDate});
+        this.setState({endDate:conference.endDate});
+    }
     render() {
+        const startDate = this.state.startDate;
+        const endDate = this.state.endDate;
+        let showDates = "To be informed";
+        if(startDate!==""&&endDate!==""){
+            let start = (new Date(startDate)).toString();
+            let startDateString = start.substring(0,start.indexOf("2021"));
+            let end = new Date(endDate).toString();
+            let endDateString = end.substring(0,end.indexOf("2021"));
+            showDates = ""+startDateString+" to "+endDateString;
+        }
         return <React.Fragment>
             <div id="content" className="position-relative top-0 start-0">
                 <header>
@@ -30,7 +52,8 @@ export default class Home extends React.Component {
                                                 <h3 className="my-heading">ADVANCEMENTS IN COMPUTING 2021</h3><br/><br/><br/>
 
                                                 <div className="alert alert-primary col-md-10 container">
-                                                    <h5 className="myp text-center">11th, 12th and 13th October 2021</h5>
+                                                    {/*<h5 className="myp text-center">11th, 12th and 13th October 2021</h5>*/}
+                                                    <h5 className="myp text-center">{showDates}</h5>
                                                 </div>
                                                 <h4 className="myp text-center">Sri Lanka Institute of Information Technology</h4>
 
