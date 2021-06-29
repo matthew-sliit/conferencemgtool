@@ -45,7 +45,7 @@ export default function showConferenceDetailsHtml(conferenceObj, savefunction){
     topicCount_XYZ021 = conferenceObj.topics.length;
     return <React.Fragment>
         <h3 style={{color:"purple"}}>Conference Details</h3>
-        <div className={"card w-50 bg-light"}>
+        <div className={"card w-75 bg-light"}>
             <div className={"card-body"}>
         <table>
             <thead>
@@ -133,7 +133,10 @@ export default function showConferenceDetailsHtml(conferenceObj, savefunction){
             </tbody>
         </table>
         </div>
+
         </div>
-        <Footer/>
+        <div>
+            <Footer/>
+        </div>
     </React.Fragment>;
 }

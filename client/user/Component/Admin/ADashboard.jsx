@@ -10,6 +10,7 @@ import getConferencePaperCount from "../SemiChartFunctions/GetConferencePaperCou
 import {getAngle} from "../SemiChartFunctions/GetAngle";
 import getAttendeeCount from "../SemiChartFunctions/GetAttendeeCount";
 import getAllUserCount from "../SemiChartFunctions/GetAllUserCount";
+import Footer from "../Footer";
 
 export default class ADashboard extends React.Component{
     constructor(props) {
@@ -59,6 +60,7 @@ export default class ADashboard extends React.Component{
                     <div id="user-chart" style={{position: "relative", left: "10px", top:"-100px"}}></div>
                 </div>
             </div>
+            <Footer/>
         </React.Fragment>;
     }
 }

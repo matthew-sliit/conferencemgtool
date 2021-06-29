@@ -1,6 +1,7 @@
 import React from "react";
 import resources from "../../resource.config";
 import Cookies from "js-cookie";
+import Footer from "../Footer";
 export default class ConferenceEditorChanges extends React.Component{
     constructor(props) {
         super(props);
@@ -63,11 +64,12 @@ export default class ConferenceEditorChanges extends React.Component{
         return <React.Fragment>
             <h5>Conference Edit History</h5>
             <table className={"table"}>
-                <thead><tr><th>username</th><th>Changed Field</th><th>Previous Value</th><th>New Value</th><th>Status</th><th>Operations</th></tr></thead>
+                <thead><tr><th>username</th><th>Changed Field</th><th style={{width:"100px"}}>Previous Value</th><th style={{width:"100px"}}>New Value</th><th>Status</th><th>Operations</th></tr></thead>
                 <tbody>
                 {records}
                 </tbody>
             </table>
+            <Footer/>
         </React.Fragment>;
     }
 }

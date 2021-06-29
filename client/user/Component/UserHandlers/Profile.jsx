@@ -61,6 +61,7 @@ export default class Profile extends React.Component{
         const data = this.state.data;
         const server_msg = this.state.server_msg;
         return <React.Fragment>
+            <h5>User Profile</h5>
             {server_msg!==null&&server_msg!=="success"?server_msg:''}
 
                 <table>

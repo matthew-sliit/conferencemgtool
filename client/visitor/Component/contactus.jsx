@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/css/contactus.css';
+import Footer from "./Footer";
 export default class WorkshopMain extends React.Component {
     constructor(props) {
         super(props);
@@ -16,18 +17,13 @@ export default class WorkshopMain extends React.Component {
     render() {
         const submit=this.state.submit;
         return <React.Fragment>
-
-            <div id="content" className="position-relative ">
-                <div class="row">
-
-                    <div class="container contact-form">
-
+            <div>
+                <div>
+                    <div class="contact-form">
                         <div class="contact-image">
                             <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="image"/>
                         </div>
-
                         <form method="#" ref={(ref) => {this.form = ref}}  action="#">
-
 
                             <h3>We want to hear from you</h3>
                             {submit!==null?"Message sent":""}
@@ -56,12 +52,10 @@ export default class WorkshopMain extends React.Component {
 
                             </div>
                         </form>
+                        <Footer/>
                 </div>
-
             </div>
-
             </div>
-
         </React.Fragment>
     }
 }

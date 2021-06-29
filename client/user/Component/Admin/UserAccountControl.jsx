@@ -1,6 +1,7 @@
 import React from "react";
 import resources from "../../resource.config";
 import Cookies from "js-cookie";
+import Footer from "../Footer";
 export default class UserAccountControl extends React.Component{
     constructor(props) {
         super(props);
@@ -173,6 +174,9 @@ export default class UserAccountControl extends React.Component{
                 {records}
                 </tbody>
             </table>
+            <div style={{position:"absolute",bottom:0,left:0,width:"100%"}}>
+                <Footer/>
+            </div>
         </React.Fragment>;
     }
 }

@@ -19,7 +19,10 @@ export default class NewsList extends React.Component{
         newsList.sort(function (x,y){
             return x.timeStamp  - y.timeStamp;
         })
-        return <div>
+        if(newsList.length<1){
+            return <p>Stay tuned!</p>;
+        }
+        return <div style={{overflowY:"scroll",height:"500px"}}>
             {newsList.map(news => {
                 return <NewsListItem newsObj={news}/>
             })}

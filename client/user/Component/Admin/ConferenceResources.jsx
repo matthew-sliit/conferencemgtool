@@ -2,6 +2,7 @@ import React from "react";
 import Cookies from "js-cookie";
 import resources from "../../resource.config";
 import {base64toBlob} from "../../api/base64toBlob";
+import Footer from "../Footer";
 
 export default class ConferenceResources extends React.Component{
     constructor(props) {
@@ -141,6 +142,9 @@ export default class ConferenceResources extends React.Component{
             </select>
             <div>
                 {showConferencePapers}
+            </div>
+            <div style={{position:"absolute",bottom:0,left:0,width:"100%"}}>
+                <Footer/>
             </div>
         </React.Fragment>;
     }

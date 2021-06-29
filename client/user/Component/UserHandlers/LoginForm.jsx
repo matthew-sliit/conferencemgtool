@@ -74,7 +74,9 @@ export default class LoginForm extends React.Component{
             <a href={"/forgot-password"}>Forgot Password</a>
              </center>
             </div>
-            <Footer/>
+            <div style={{position:"absolute",bottom:0, width:"100%", left:0}}>
+                <Footer/>
+            </div>
         </React.Fragment>
     }
 }

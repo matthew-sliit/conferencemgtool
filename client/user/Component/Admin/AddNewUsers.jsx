@@ -5,6 +5,7 @@ import {getRole} from "../../api/roles";
 import * as A from "../../assets/css/btn-styles-admin.css";
 import Cookies from 'js-cookie';
 import resources from "../../resource.config";
+import Footer from "../Footer";
 export default class AddNewUsers extends React.Component{
     constructor(props) {
         super(props);
@@ -100,6 +101,7 @@ export default class AddNewUsers extends React.Component{
             <p/>
             {error}
             {choice!==null?choice:''}
+
         </React.Fragment>
     }
 }

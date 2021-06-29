@@ -8,6 +8,7 @@ import m1 from 'url:../../shared/assets/img/m1.jpg';
 import m2 from 'url:../../shared/assets/img/m2.png';
 import m3 from 'url:../../shared/assets/img/m3.jpg';
 import m4 from 'url:../../shared/assets/img/m4.jpg';
+import Footer from "./Footer";
 
 export default class Commitee extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ export default class Commitee extends React.Component {
 
     render() {
         return <React.Fragment>
-            <div id="content" className="position-relative">
+            <div className="position-relative" style={{position:"relative",left:"-4px"}}>
                 <div className="justify-content-center">
                 <div className="container about-title clearfix mx-auto">
                     <h1><span>Organizing Commitee</span></h1>
@@ -73,6 +74,7 @@ export default class Commitee extends React.Component {
                         </ul>
                     </div>
             </div>
+            <Footer/>
         </React.Fragment>
 
     }

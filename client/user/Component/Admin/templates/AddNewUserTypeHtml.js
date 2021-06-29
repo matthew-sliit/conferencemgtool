@@ -1,6 +1,7 @@
 import React from "react";
+import Footer from "../../Footer";
 export default function AddNewUserTypeHtml(type, onClickFunction){
-    return <table>
+    return <React.Fragment><table>
         <thead>
         <tr><th></th><th></th></tr>
         </thead>
@@ -11,7 +12,7 @@ export default function AddNewUserTypeHtml(type, onClickFunction){
         <tr>
             <td>User Email</td>
             <td><input type="text" placeholder="Enter user email" id={"user_email"}/>
-                <button className="mx-1" onClick={()=>onClickFunction('user_email',type)}>Add</button>
+                <button className="mx-1 btn btn-outline-success" onClick={()=>onClickFunction('user_email',type)}>Add</button>
             </td>
         </tr>
         <tr>
@@ -24,9 +25,12 @@ export default function AddNewUserTypeHtml(type, onClickFunction){
         <tr>
             <td>Password</td>
             <td><input type="text" id={"admin_show_password"} disabled/>
-                <button className="mx-1">copy</button>
             </td>
         </tr>
         </tbody>
-    </table>;
+    </table>
+        <div style={{position:"absolute", bottom:"0px", width:"100%", left:"-3px"}}>
+            <Footer/>
+        </div>
+    </React.Fragment>;
 }
