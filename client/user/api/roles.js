@@ -13,7 +13,7 @@ exports.getRole = function getRole(type){
         return UserRoles.ATTENDEE;
     }else if(type==="author"||type==="researcher"){
         return UserRoles.RESEARCHER;
-    }else if(type==="workshop"||type==="workshop_presenter"){
+    }else if(type==="workshop"||type==="workshop_presenter"||type==="presenter"){
         return UserRoles.WORKSHOP_PRESENTER;
     }else if(type==="editor"){
         return UserRoles.EDITOR;

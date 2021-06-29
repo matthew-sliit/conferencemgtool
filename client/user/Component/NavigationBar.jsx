@@ -21,6 +21,7 @@ export default class NavigationBar extends React.Component{
         return <React.Fragment>
             <NavigateItemHolder path={"/admin/dashboard"} name={"Dashboard"}/>
             <NavigateItemHolder path={"/admin/conference"} name={"Conference Details"}/>
+            <NavigateItemHolder path={"/admin/conference-history"} name={"Conference Edit History"}/>
             <NavigateItemHolder path={"/admin/res"} name={"Conference Resources"}/>
             <NavigateItemHolder path={"/admin/uam"} name={"Add Users"}/>
             <NavigateItemHolder path={"/admin/uac"} name={"UAC"}/>
@@ -30,6 +31,7 @@ export default class NavigationBar extends React.Component{
         return <React.Fragment>
             <NavigateItemHolder path={"/editor/dashboard"} name={"Dashboard"}/>
             <NavigateItemHolder path={"/editor/contents"} name={"Content Edits"}/>
+            <NavigateItemHolder path={"/editor/showedits"} name={"Show Edits"}/>
         </React.Fragment>;
     }
     getReviewerNavigations(){
@@ -42,7 +44,6 @@ export default class NavigationBar extends React.Component{
     getUserNavigations(){
         return <React.Fragment>
             <NavigateItemHolder path={"/user/dashboard"} name={"Dashboard"}/>
-            <NavigateItemHolder path={"/user/payments"} name={"Payments"}/>
         </React.Fragment>;
     }
     render() {

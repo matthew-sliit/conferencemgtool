@@ -1,5 +1,5 @@
 import React from "react";
-export default function AddNewUserCsvHtml(){
+export default function AddNewUserCsvHtml(onClickAddCsv){
     return <React.Fragment>
         <table>
             <thead>
@@ -15,9 +15,9 @@ export default function AddNewUserCsvHtml(){
             </tr>
             <tr className="border border-secondary rounded" key={2}>
                 <td>&nbsp;<label>Add CSV</label></td>
-                <td><input type="file"/></td>
+                <td><input type="file" id={"users_file"}/></td>
                 <td className="p-3">
-                    <button className="btn btn-success">↑</button>
+                    <button className="btn btn-success" onClick={()=>onClickAddCsv('users_file')}>↑</button>
                 </td>
             </tr>
             <tr key={3}>

@@ -7,6 +7,11 @@ require('dotenv').config();
 const HomeRoutes = require('./routes/home.router.js').DefaultRouter;
 const LoginRoutes = require('./routes/login.router.js').LoginRouter;
 const ProfileRoutes = require('./routes/profile.router').ProfileRouter;
+const AdminRoutes = require('./routes/admin.router').AdminRouter;
+const OtherUsers = require('./routes/user-service.router').UserServices;
+const EditorRoutes = require('./routes/editor.router').EditorRouter;
+const ChartMethodsRouter = require('./routes/counter.router').ChartMethodsRouter;
+const VisitorServicesRouter = require('./routes/visitor-service.router').VisitorServices;
 //setup server
 const server = new Koa();
 //attach to server
@@ -16,6 +21,11 @@ server.use(bodyparser())
     .use(HomeRoutes.routes()).use(HomeRoutes.allowedMethods())
     .use(LoginRoutes.routes()).use(LoginRoutes.allowedMethods())
     .use(ProfileRoutes.routes()).use(ProfileRoutes.allowedMethods())
+    .use(AdminRoutes.routes()).use(AdminRoutes.allowedMethods())
+    .use(OtherUsers.routes()).use(OtherUsers.allowedMethods())
+    .use(EditorRoutes.routes()).use(EditorRoutes.allowedMethods())
+    .use(ChartMethodsRouter.routes()).use(ChartMethodsRouter.allowedMethods())
+    .use(VisitorServicesRouter.routes()).use(VisitorServicesRouter.allowedMethods())
     .use(context=>{
         //where the request is to an invalid endpoint
         context.body="Access Denied!";
