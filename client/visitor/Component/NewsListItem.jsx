@@ -11,7 +11,7 @@ export default function NewsListItem(props){
     }
     return  <React.Fragment>
         <b>{new Date(newsObj.timeStamp).toString()}</b>
-        <p style={{fontsize:"9px"}}>{newsObj.field + " updated to " + newsObj.new}</p>;
+        <p style={{fontsize:"9px"}}>{newsObj.field + " updated to " + newsObj.new}</p>
         <br/>
     </React.Fragment>
 

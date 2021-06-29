@@ -65,6 +65,7 @@ router.put("/suggest/:id", async ctx=>{
     conferenceEdit.change(ctx.request.body);
     //console.log(typeof conferenceSavedAsRef.getDifference(conferenceEdit));
     let changes = conferenceSavedAsRef.getDifference(conferenceEdit);
+    //console.log(JSON.stringify(changes));
     let changedConference = new ConferenceEditHistory();
     changedConference.addChanges(userid,changes);
     if(changes.length>0){
