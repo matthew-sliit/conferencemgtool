@@ -12,7 +12,7 @@ router.get("/conference-papers", async ctx=>{
     ctx.response.set('content-type','application/json');
     await countOfDocuments(Paper.AUTHORCOLLECTION).then(
         function (res){
-            console.log(JSON.stringify(res));
+            //console.log(JSON.stringify(res));
             ctx.body = res;
         }
     )
@@ -22,7 +22,7 @@ router.get("/workshops", async ctx=>{
     ctx.response.set('content-type','application/json');
     await countOfDocuments(Paper.WORKSHOPCOLLECTION).then(
         function (res){
-            console.log(JSON.stringify(res));
+            //console.log(JSON.stringify(res));
             ctx.body = res;
         }
     )

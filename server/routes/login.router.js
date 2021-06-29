@@ -7,6 +7,8 @@ const readDocument = require('../api/db/mongodb.api').readDocument;
 const Login = require('../api/login.api').Login;
 const Profile = require('../api/profile.api').Profile;
 const usernameGen = require('../api/util/username-generator');
+const {AdminLogin} = require("../api/adminlogin.api");
+const {countOfDocuments} = require("../api/db/mongodb.api");
 //router prefix
 const router = new Router({prefix:'/login'});
 //post method in login
@@ -15,6 +17,27 @@ router.post('/',async (context)=>{
     const password = context.request.body.password;
     let userFromDB;
     try{
+        let haveusers = 0;
+        await countOfDocuments(Login.COLLECTION).then(
+            function (res){
+                if(res){
+                    haveusers = res;
+                    //no users.... then auto add default admin
+                }
+            }
+        )
+        if(haveusers===0){
+            let admin = new AdminLogin();//allows to add role Admin
+            admin = AdminLogin.defaultAdministrator();
+            let adminProfile = new Profile();
+            adminProfile.role = admin.role;
+            await saveDocumentGetId(Login.COLLECTION,[admin.getSaveToDB()]).then(
+                function (res){
+                    adminProfile.id = res.insertedIds[0].toString();
+                }
+            )
+            saveDocument(Profile.COLLECTION,[adminProfile.getSaveToDB()]);
+        }
         await readDocument(Login.COLLECTION,"username",username).then(
             function(resolved){
                 userFromDB = resolved;

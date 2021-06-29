@@ -35,10 +35,10 @@ export default class ADashboard extends React.Component{
         let userAngle = getAngle(users,3000);
         //console.log("pa:"+paperAngle);
         //append to chart
-        chart.draw(workshopAngle, "Workshops", 10, "ws-chart");
-        chart.draw(paperAngle,"Conference Papers",500,"author-chart");
-        chart.draw(attendeeAngle,"Attendees",500,"attendee-chart");
-        chart.draw(userAngle,"Users",3000,"user-chart");
+        chart.draw(workshopAngle, "Workshops", workshops, "ws-chart");
+        chart.draw(paperAngle,"Conference Papers",papers,"author-chart");
+        chart.draw(attendeeAngle,"Attendees",attendees,"attendee-chart");
+        chart.draw(userAngle,"Users",users,"user-chart");
         //console.log("a:"+authors+" e:"+editors+" r:"+reviewers+" w:"+workshops +" cp:"+papers+ "exp:"+papersExpected);
     }
     render() {

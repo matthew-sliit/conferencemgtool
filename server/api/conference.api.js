@@ -84,4 +84,27 @@ exports.Conference = class Conference{
         }
         return difference;
     }
+    static getInitialFormat(){
+        let conference = new Conference();
+        conference.name = "International Conference on Application Frameworks";
+        conference.keynotes = [{
+            "name": "Dr.Lei",
+            "link": "www.google.lk"
+        }, {
+            "name": "Dr.Kei",
+            "link": "www.google.lk"
+        }, {
+            "name": "Dr.Jei",
+            "link": "www.google.lk"
+        }];
+        conference.submissionDeadline = "";
+        conference.reviewDeadline = "";
+        conference.papersExpected = 0;
+        conference.startDate = "";
+        conference.endDate = "";
+        conference.topics = [""];
+        conference.tag = "ICAF";
+        conference.venue = "SLIIT Malabe Campus, New Kandy Rd, Malabe 10115";
+        return conference;
+    }
 }

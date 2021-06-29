@@ -18,10 +18,18 @@ const router = new Router({
 router.get("/conference", async ctx=>{
     ctx.response.set('content-type','application/json');
     //console.log("fetch conference");
+    let conferenceInitialModel = new Conference();
     await readAllDocuments(Conference.COLLECTION).then(
         function (res){
+            //no conference record when deploying to a new database
+            if(res.length===0){
+                conferenceInitialModel = Conference.getInitialFormat();
+                saveDocument(Conference.COLLECTION,[conferenceInitialModel.getSaveToDb()]);
+                ctx.body = conferenceInitialModel;
+            }else{
+                ctx.body = res[0];//fixed
+            }
             //console.log(JSON.stringify(res[0]));
-            ctx.body = res[0];//fixed
         }
     )
 })
