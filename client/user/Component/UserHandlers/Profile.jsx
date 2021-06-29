@@ -56,35 +56,39 @@ export default class Profile extends React.Component{
         return {...details,"change_password":change_password,"confirm_password":confirm_password}
     }
     render() {
+
         const username = this.state.username;
         const data = this.state.data;
         const server_msg = this.state.server_msg;
         return <React.Fragment>
             {server_msg!==null&&server_msg!=="success"?server_msg:''}
-            <table>
+
+                <table>
                 <thead><tr><th></th><th></th></tr></thead>
                 <tbody>
                 <tr>
                     <td><label>Username&nbsp;</label></td>
                     <td>
-                        <input type={"text"} value={username} disabled={true}/>
+                        <input type={"text"}  class="form-control " value={username} disabled={true}/>
                     </td>
                 </tr>
                 <UserAdded obj={data}/>
                 <tr>
                     <td><label>Current Password&nbsp;</label></td>
                     <td>
-                        <input type={"password"} placeholder={"Enter current password"} ref={(ref) => {this.current_password = ref}}/>
+                        <input type={"password"}  class="form-control " placeholder={"Enter current password"} ref={(ref) => {this.current_password = ref}}/>
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style={{textAlign:'right'}}>
-                        <button onClick={this.updateProfile}>Save</button>
+                        <button class="btn btn-success" onClick={this.updateProfile}>Save</button>
                     </td>
                 </tr>
                 </tbody>
             </table>
+
         </React.Fragment>;
+
     }
 }

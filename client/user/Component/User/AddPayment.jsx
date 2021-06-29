@@ -43,6 +43,8 @@ export default class AddPayment extends React.Component{
         const paper_id = this.state.paper_id;
         if(paper_id===null){
             return <p>Todo</p>;
+
+
         }
         return paymentHtml(paper_id,this.onClickPay);
     }

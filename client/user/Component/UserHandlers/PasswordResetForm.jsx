@@ -25,16 +25,18 @@ export default class PasswordResetForm extends React.Component{
                 <thead><tr><th></th><th></th></tr></thead>
                 <tbody>
                 <tr>
-                    <td><label>Enter Username</label></td><td><input type={"text"} placeholder={"Enter username"} ref={(ref) => {this.username = ref}}/></td>
+                    <td><label>Enter Username</label></td><td>
+                    <input type={"text"}  class="form-control " placeholder={"Enter username"} ref={(ref) => {this.username = ref}}/></td>
                 </tr>
                 <tr>
-                    <td><label>Enter Email</label></td><td><input type={"text"} placeholder={"Enter password"} ref={(ref) => {this.email = ref}}/></td>
+                    <td><label>Enter Email</label></td><td>
+                    <input type={"text"}  class="form-control " placeholder={"Enter email"} ref={(ref) => {this.email = ref}}/></td>
                 </tr>
                 </tbody>
             </table>
             <br/>
-            <button onClick={this.resetPasswordInServer}>Request Reset</button> &nbsp;
-            <button onClick={()=>{window.location.href="/"}}>Login</button>
+            <button class="btn btn-danger" onClick={this.resetPasswordInServer}>Request Reset</button> &nbsp;
+            <button class="btn btn-success" onClick={()=>{window.location.href="/"}}>Login</button>
         </React.Fragment>
     }
 }

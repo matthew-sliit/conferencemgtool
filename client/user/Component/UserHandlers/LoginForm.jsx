@@ -2,6 +2,7 @@ import React from "react";
 import {UserRoles} from "../../api/roles";
 import resources from "../../resource.config";
 import Cookies from 'js-cookie';
+
 export default class LoginForm extends React.Component{
     constructor(props) {
         super(props);
@@ -40,7 +41,10 @@ export default class LoginForm extends React.Component{
             }
         }
     }
+
     render() {
+
+
         const server_msg = this.state.server_msg;
         let error_msg;
         if(server_msg!==null)
@@ -48,16 +52,27 @@ export default class LoginForm extends React.Component{
                 if(server_msg.substring(0,7)!=="success")
                     error_msg = server_msg;
         return <React.Fragment>
-            <h5>Login</h5>
+
+            <div  style={{backgroundColor: "lightblue"}}>
+<center>
+
+
+            <h3>Login</h3>
             <p>{error_msg}</p>
-            <input type={"text"} placeholder={"Enter username"} ref={(ref) => {this.username = ref}}/>
+
+                <div className="form-group w-25">
+            <input type={"text"} class="form-control" placeholder={"Enter username"} ref={(ref) => {this.username = ref}}/>
             <p/>
-            <input type={"password"} placeholder={"Enter password"} ref={(ref) => {this.password = ref}}/>
+            <input type={"password"}  class="form-control"  placeholder={"Enter password"} ref={(ref) => {this.password = ref}}/>
             <p/>
-            <button onClick={this.handleLogin}>Login</button> &nbsp;
-            <button onClick={this.redirectToSignUp}>Register</button>
+</div>
+
+            <button class="btn btn-success" onClick={this.handleLogin}>&nbsp;&nbsp;Login &nbsp;&nbsp;</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-primary" onClick={this.redirectToSignUp}>&nbsp;&nbsp;Register &nbsp;&nbsp;</button> <br></br>
             <br/>
             <a href={"/forgot-password"}>Forgot Password</a>
+</center>
+            </div>
         </React.Fragment>
     }
 }

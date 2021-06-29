@@ -44,6 +44,8 @@ export default class NavigationBar extends React.Component{
     getUserNavigations(){
         return <React.Fragment>
             <NavigateItemHolder path={"/user/dashboard"} name={"Dashboard"}/>
+
+
         </React.Fragment>;
     }
     render() {
