@@ -5,6 +5,7 @@ import Keynotes from "./Component/keynotes";
 import WorkshopMain from "./Component/workshopMain";
 import WorkshopSubmission from "./Component/workshopSubmission";
 import ContactUs from "./Component/contactus";
+import Commitee from "./Component/commitee";
 
 export default () => {
     return <Router>
@@ -20,6 +21,9 @@ export default () => {
             </Route>
             <Route exact path={"/contactus"}>
                 <ContactUs/>
+            </Route>
+            <Route exact path={"/commitee"}>
+                <Commitee/>
             </Route>
             <Route exact path={"/workshopSubmission"}>
             <WorkshopSubmission/>
