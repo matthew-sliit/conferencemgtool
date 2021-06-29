@@ -17,6 +17,7 @@
   "author": "EagleEye",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-beta.2",
     "@parcel/transformer-sass": "^2.0.0-beta.2",
     "jest": "^27.0.4",
     "parcel": "^2.0.0-beta.2"

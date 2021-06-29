@@ -43,7 +43,9 @@ export default function showConferenceDetailsHtml(conferenceObj, savefunction){
     }
     topicCount_XYZ021 = conferenceObj.topics.length;
     return <React.Fragment>
-        <h5>Conference Details</h5>
+        <h3 style={{color:"purple"}}>Conference Details</h3>
+        <div className={"card w-50 bg-light"}>
+            <div className={"card-body"}>
         <table>
             <thead>
             <tr>
@@ -52,84 +54,84 @@ export default function showConferenceDetailsHtml(conferenceObj, savefunction){
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr className={"mb-3"}>
                 <td>Conference Name</td>
-                <td><input type="text" value={conferenceObj.name} style={{width: "590px"}} id={"c_name"} disabled/></td>
+                <td><input type="text" className="form-control mb-3" value={conferenceObj.name} style={{width: "590px"}} id={"c_name"} disabled/></td>
             </tr>
-            <tr>
-                <td colSpan="2"><b>Topics</b></td>
+            <tr className={"mb-3"}>
+                <td colSpan="2"><b style={{color:"purple"}}>Topics</b></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td colSpan="2">
                     {topics}
                     <br/>
                     <div id="additional_topics"></div>
-                    x. <button className="btn btn-outline-primary" style={{fontSize: "14px"}} onClick={()=>addNewTopic()}>Add New Topic</button>
+                    x. <button className="btn btn-primary mt-3" style={{fontSize: "14px"}} onClick={()=>addNewTopic()}>Add New Topic</button>
                 </td>
             </tr>
-            <tr>
-                <td colSpan="2"><b>Keynotes</b></td>
+            <tr className={"mb-3"}>
+                <td colSpan="2"><b style={{color:"purple"}} className={"mt-3"}>Keynotes</b></td>
             </tr>
-            <tr>
+            <tr className={"mb-2"}>
                 <td>First Keynote Speaker</td>
-                <td><input type="text" placeholder="Enter 1st Speaker name" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[0].name}  id={"keyname1"}/>&nbsp;<input
-                    type="text" placeholder="Enter 1st Speaker link bio" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[0].link}  id={"keylink1"}/></td>
+                <td><input type="text"  placeholder="Enter 1st Speaker name" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[0].name}  id={"keyname1"}/>&nbsp;<input
+                    type="text"  placeholder="Enter 1st Speaker link bio" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[0].link}  id={"keylink1"}/></td>
             </tr>
-            <tr>
+            <tr className={"mb-2"}>
                 <td>Second Keynote Speaker</td>
-                <td><input type="text" placeholder="Enter 2nd Speaker name" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[1].name} id={"keyname2"}/>&nbsp;<input
-                    type="text" placeholder="Enter 2nd Speaker link bio" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[1].link}  id={"keylink2"}/></td>
+                <td><input type="text"   placeholder="Enter 2nd Speaker name" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[1].name} id={"keyname2"}/>&nbsp;<input
+                    type="text"  placeholder="Enter 2nd Speaker link bio" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[1].link}  id={"keylink2"}/></td>
             </tr>
-            <tr>
+            <tr className={"mb-2"}>
                 <td>Third Keynote Speaker</td>
-                <td><input type="text" placeholder="Enter 3rd Speaker name" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[2].name}  id={"keyname3"}/>&nbsp;<input
-                    type="text" placeholder="Enter 3rd Speaker link bio" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[2].link}  id={"keylink3"}/></td>
+                <td><input type="text"  placeholder="Enter 3rd Speaker name" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[2].name}  id={"keyname3"}/>&nbsp;<input
+                    type="text"  placeholder="Enter 3rd Speaker link bio" style={{width: "300px"}} defaultValue={conferenceObj.keynotes[2].link}  id={"keylink3"}/></td>
             </tr>
-            <tr>
-                <td colSpan="2"><b>Deadlines</b></td>
+            <tr className={"mb-3"}>
+                <td colSpan="2"><b style={{color:"purple"}} className={"mt-3"}>Deadlines</b></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td>Paper Submission Deadline</td>
-                <td><input type="datetime-local" defaultValue={conferenceObj.submissionDeadline} placeholder="Enter Submission Deadline" id={"c_submissionDeadline"}/></td>
+                <td><input type="datetime-local" className="form-control mb-3" style={{width: "45%"}} defaultValue={conferenceObj.submissionDeadline} placeholder="Enter Submission Deadline" id={"c_submissionDeadline"}/></td>
             </tr>
-            <tr>
-                <td colSpan="2"><b>Options</b></td>
+            <tr className={"mb-3"}>
+                <td colSpan="2"><b style={{color:"purple"}}>Options</b></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td>Paper Review Deadline</td>
-                <td><input type="datetime-local" defaultValue={conferenceObj.reviewDeadline} placeholder="Enter Review Deadline" id={"c_reviewDeadline"}/></td>
+                <td><input type="datetime-local" className="form-control mb-3" style={{width: "45%"}} defaultValue={conferenceObj.reviewDeadline} placeholder="Enter Review Deadline" id={"c_reviewDeadline"}/></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td colSpan="2"></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td>Expected number of Papers</td>
-                <td><input type="number" min="0" step="1" placeholder="Expected no. conference papers" style={{width: "249px"}}  defaultValue={conferenceObj.papersExpected} id={"c_papersExpected"}/></td>
+                <td><input type="number" min="0" step="1" className="form-control mb-3" placeholder="Expected no. conference papers" style={{width: "45%"}}  defaultValue={conferenceObj.papersExpected} id={"c_papersExpected"}/></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td>Conference Start Date</td>
-                <td><input type="datetime-local" placeholder="Start date" defaultValue={conferenceObj.startDate} id={"c_startDate"}/></td>
+                <td><input type="datetime-local" placeholder="Start date" className="form-control mb-3" style={{width: "45%"}} defaultValue={conferenceObj.startDate} id={"c_startDate"}/></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td>Conference Venue</td>
-                <td><input type="text" placeholder="Venue" style={{width: "606px"}} defaultValue={conferenceObj.venue} id={"c_venue"}/></td>
+                <td><input type="text" placeholder="Venue" className="form-control mb-3" style={{width: "606px"}} defaultValue={conferenceObj.venue} id={"c_venue"}/></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td>Conference End Date</td>
-                <td><input type="datetime-local" placeholder="End date" defaultValue={conferenceObj.endDate} id={"c_endDate"}/></td>
+                <td><input type="datetime-local" placeholder="End date" className="form-control mb-3" style={{width: "45%"}} defaultValue={conferenceObj.endDate} id={"c_endDate"}/></td>
             </tr>
-            <tr>
+            <tr className={"mb-3"}>
                 <td>Conference Tag</td>
-                <td><input type="text" placeholder="Tag" value={conferenceObj.tag} disabled style={{width: "249px"}} id={"c_tag"}/></td>
+                <td><input type="text" placeholder="Tag" className="form-control mb-3" value={conferenceObj.tag}  disabled style={{width: "45%"}} id={"c_tag"}/></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td>
-                    <button className="btn btn-success" onClick={()=>savefunction(getDetailsAsBundle())}>Save</button>
-                </td>
+                <div>
+                    <button className="btn btn-success col-md-10" onClick={()=>savefunction(getDetailsAsBundle())}>Save</button>
+                </div>
             </tr>
             </tbody>
         </table>
+        </div>
+        </div>
     </React.Fragment>;
 }

@@ -37,11 +37,14 @@ exports.Conference = class Conference{
         if (this.reviewDeadline !== obj.reviewDeadline) {
             difference.push({"field": "reviewDeadline", "old": this.reviewDeadline, "new": obj.reviewDeadline,"approval":"UNAPPROVED"});
         }
-        let papersExpected = 0;
+        let papersExpected = 0, currentpapers = 0;
         try {
             papersExpected = parseInt(obj.papersExpected);
-        }catch (exception){}
-        if(this.papersExpected!==papersExpected){
+            currentpapers = parseInt(this.papersExpected);
+        }catch (exception){
+            //console.log("paperExpected EX:"+papersExpected);
+        }
+        if(currentpapers!==papersExpected){
             difference.push({"field":"papersExpected","old":this.papersExpected,"new":obj.papersExpected,"approval":"UNAPPROVED"});
         }
         if(this.startDate!==obj.startDate){
@@ -70,9 +73,9 @@ exports.Conference = class Conference{
         if(this.keynotes.length!==obj.keynotes.length){
             pushTopics = true;
         }else {
-            console.log(JSON.stringify(this.keynotes));
-            console.log(JSON.stringify(obj.keynotes));
-            for (let i; i < this.keynotes.length; i++) {
+            //console.log(JSON.stringify(this.keynotes));
+            //console.log(JSON.stringify(obj.keynotes));
+            for (let i=0; i < this.keynotes.length; i++) {
                 if (this.keynotes[i].name !== obj.keynotes[i].name || this.keynotes[i].link !== obj.keynotes[i].link) {
                     pushKeynotes = true;
                     break;
@@ -80,7 +83,10 @@ exports.Conference = class Conference{
             }
         }
         if(pushKeynotes){
+            console.log("pushing keynotes!");
             difference.push({"field":"keynotes","old":this.keynotes,"new":obj.keynotes,"approval":"UNAPPROVED"});
+        }else{
+            console.log("ignoring keynotes!");
         }
         return difference;
     }

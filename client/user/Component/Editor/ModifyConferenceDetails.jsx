@@ -39,6 +39,7 @@ export default class ModifyConferenceDetails extends React.Component{
     async onClickSaveConferenceDetails(data){
         console.log("Save it!" + JSON.stringify(data));
         await this.suggestUpdateToConferenceDetails(data);
+        window.location.href="/editor/contents";
     }
     render() {
         const conference = this.state.conference;

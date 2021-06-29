@@ -41,34 +41,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" id="setcursor_home" onmouseover="moveCursorTo('setcursor_home');" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" id="setcursor_home" onmouseover="moveCursorTo('setcursor_home');" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#" id="setcursor_main2" onmouseover="moveCursorTo('setcursor_main2');" onmouseleave="moveCursorTo('setcursor_home')">Timeline</a>
-                    </li>
-                    <li class="nav-item dropdown mx-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="setcursor_ws" onmouseover="moveCursorTo('setcursor_ws');" onmouseleave="moveCursorTo('setcursor_home')">
-                            Commitee
-                        </a>
-                        <ul class="dropdown-menu mx-3" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown mx-3">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="setcursor_attendee" onmouseover="moveCursorTo('setcursor_attendee');" onmouseleave="moveCursorTo('setcursor_home')">
-                            Past proceedings
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link" href="/keynotes" id="setcursor_main2" onmouseover="moveCursorTo('setcursor_main2');" onmouseleave="moveCursorTo('setcursor_home')">Keynote Speakers</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#" id="setcursor_contact" onmouseover="moveCursorTo('setcursor_contact');" onmouseleave="moveCursorTo('setcursor_home')">Contact us</a>
+                        <a class="nav-link" href="/commitee" id="setcursor_main3" onmouseover="moveCursorTo('setcursor_main3');" onmouseleave="moveCursorTo('setcursor_commitee')">Commitee</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="/contactus" id="setcursor_contact" onmouseover="moveCursorTo('setcursor_contact');" onmouseleave="moveCursorTo('setcursor_home')">Contact us</a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link" href="#" id="setcursor_reg" onmouseover="moveCursorTo('setcursor_reg');" onmouseleave="moveCursorTo('setcursor_home')">Register</a>
@@ -81,7 +63,7 @@
         </div>
     </nav>
     <!-- Left Naviagtion panel -->
-    <div class="container nav-bar-bg" style="position: absolute; top:110px; width: 280px; z-index: -1;">
+    <div class="container nav-bar-bg" style="position: absolute; top:110px; width: 18%; z-index: -1;">
         <a href="/" class="d-flex align-items-center pb-3 mb-4 link-dark text-decoration-none">
         </a>
         <ul class="list-unstyled ps-0">
@@ -102,9 +84,8 @@
                 </a>
                 <div class="collapse collapse-transition" id="nav-collapse-l1">
                     <ul class="list-unstyled ps-4">
-                        <li role="button" onclick="window.location.href='#WS'">Workshops</li>
-                        <li role="button" onclick="window.location.href='#callForWS'">Call for Workshops</li>
-                        <li role="button" onclick="window.location.href='#WSsubmit'">Submission guidelines</li>
+                        <li role="button" onclick="window.location.href='/workshopmain'">Workshops</li>
+                        <li role="button" onclick="window.location.href='/workshopSubmission'">Submission guidelines</li>
                     </ul>
                 </div>
             </li>
@@ -131,14 +112,10 @@
 <!-- rendered content from App.jsx -->
 <!-- Every content will contain the footer as the finishing touch -->
 <div id="content" class="content mx-2">
-    <h5>Lorem</h5>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-    </p>
+
 </div>
+
+
 <!-- external js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <script type="text/javascript">
