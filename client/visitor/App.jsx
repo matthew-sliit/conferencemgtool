@@ -7,7 +7,6 @@ import WorkshopSubmission from "./Component/workshopSubmission";
 import ContactUs from "./Component/contactus";
 import Commitee from "./Component/commitee";
 import PaperTopic from "./Component/PaperTopic";
-import AttendenceInstructions from "./Component/AttendenceInstructions";
 export default () => {
     return <Router>
         <Switch>
