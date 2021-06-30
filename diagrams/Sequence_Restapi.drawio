@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-30T13:51:01.702Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="U7Opl3YKKMUnlf92BI5O" version="14.8.2" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-06-30T13:54:33.846Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="cA2oYlYFXb_ztRrlZpi2" version="14.8.2" type="github" pages="7">
   <diagram id="q4KeziVVks7lWcbCtezH" name="Admin">
     <mxGraphModel dx="1038" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1849,7 +1849,7 @@
         <mxCell id="giRAST-PsFqEcgFFe73X-20" value="Dashboard" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
           <mxGeometry x="29" y="20" width="120" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-21" value="ChartMethodsRouter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+        <mxCell id="giRAST-PsFqEcgFFe73X-21" value="UserServicesRoutes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
           <mxGeometry x="448" y="20" width="120" height="150" as="geometry" />
         </mxCell>
         <mxCell id="giRAST-PsFqEcgFFe73X-22" value="{method: get} /user/author/default&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
@@ -1885,7 +1885,7 @@
         <mxCell id="i5oWHsLDg9Te5UYvXHYp-0" value="Add Reviewed Conference Paper" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
           <mxGeometry x="29" y="204" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="e-PJ9E4n0dmwjCEHrtqS-0" value="ReviewerRoutes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+        <mxCell id="e-PJ9E4n0dmwjCEHrtqS-0" value="UserServicesRoutes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
           <mxGeometry x="448" y="194" width="120" height="160" as="geometry" />
         </mxCell>
         <mxCell id="e-PJ9E4n0dmwjCEHrtqS-1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
