@@ -43,6 +43,8 @@ export default class Home extends React.Component {
             }else{
                 showDates = "To be informed";
             }
+        }else{
+            showDates = "To be informed";
         }
         return <React.Fragment>
             <div>
