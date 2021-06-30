@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-30T13:18:17.804Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="55BG-w0Cd7vgy-kC1JHk" version="14.8.2" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-06-30T13:51:01.702Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="U7Opl3YKKMUnlf92BI5O" version="14.8.2" type="github" pages="7">
   <diagram id="q4KeziVVks7lWcbCtezH" name="Admin">
     <mxGraphModel dx="1038" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1847,51 +1847,27 @@
         <mxCell id="Y8C7f3c6BkwXQpBVVaye-0" />
         <mxCell id="Y8C7f3c6BkwXQpBVVaye-1" parent="Y8C7f3c6BkwXQpBVVaye-0" />
         <mxCell id="giRAST-PsFqEcgFFe73X-20" value="Dashboard" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry x="20" y="20" width="120" height="320" as="geometry" />
+          <mxGeometry x="29" y="20" width="120" height="150" as="geometry" />
         </mxCell>
         <mxCell id="giRAST-PsFqEcgFFe73X-21" value="ChartMethodsRouter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry x="448" y="20" width="120" height="320" as="geometry" />
+          <mxGeometry x="448" y="20" width="120" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-22" value="{method: get} /user/author/default getPapersFromServer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry x="140" y="20" width="310" height="20" as="geometry" />
+        <mxCell id="giRAST-PsFqEcgFFe73X-22" value="{method: get} /user/author/default&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+          <mxGeometry x="195" y="20" width="200" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-23" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="150" y="150" as="sourcePoint" />
-            <mxPoint x="447.96000000000004" y="150" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-24" value="{method:get} getConferenceValues" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry x="190" y="80" width="200" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-25" value="{method:get} getWorkshopPaperCount" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry x="200" y="130" width="220" height="20" as="geometry" />
+        <mxCell id="giRAST-PsFqEcgFFe73X-24" value="{method: get} /user/workshop/default&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+          <mxGeometry x="197" y="89" width="210" height="20" as="geometry" />
         </mxCell>
         <mxCell id="giRAST-PsFqEcgFFe73X-26" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.296;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="120" as="sourcePoint" />
-            <mxPoint x="150" y="121" as="targetPoint" />
+            <mxPoint x="450" y="135" as="sourcePoint" />
+            <mxPoint x="150" y="136" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-27" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.296;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="170" as="sourcePoint" />
-            <mxPoint x="150" y="171" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-28" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="150" y="200" as="sourcePoint" />
-            <mxPoint x="447.96000000000004" y="200" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-29" value="{method:get} getWorkshopPaperCount" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry x="200" y="180" width="220" height="20" as="geometry" />
         </mxCell>
         <mxCell id="giRAST-PsFqEcgFFe73X-30" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="150" y="100" as="sourcePoint" />
-            <mxPoint x="447.96000000000004" y="100" as="targetPoint" />
+            <mxPoint x="150" y="109" as="sourcePoint" />
+            <mxPoint x="447.96000000000004" y="109" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="giRAST-PsFqEcgFFe73X-31" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
@@ -1906,41 +1882,32 @@
             <mxPoint x="150" y="61" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-33" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+        <mxCell id="i5oWHsLDg9Te5UYvXHYp-0" value="Add Reviewed Conference Paper" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+          <mxGeometry x="29" y="204" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e-PJ9E4n0dmwjCEHrtqS-0" value="ReviewerRoutes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+          <mxGeometry x="448" y="194" width="120" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="e-PJ9E4n0dmwjCEHrtqS-1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="150" y="239" as="sourcePoint" />
-            <mxPoint x="447.96000000000004" y="239" as="targetPoint" />
+            <mxPoint x="150" y="234" as="sourcePoint" />
+            <mxPoint x="447.96000000000004" y="234" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-34" value="{method:get} getAttendeeCount" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry x="220" y="219" width="180" height="20" as="geometry" />
+        <mxCell id="e-PJ9E4n0dmwjCEHrtqS-2" value="{method: put} user/review/author : conferenceid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+          <mxGeometry x="160" y="214" width="270" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-35" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.296;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="259" as="sourcePoint" />
-            <mxPoint x="150" y="260" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="xUnZi_pSxUf7bpd5QiFx-0" value="Add Reviewed Workshop Paper" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+          <mxGeometry x="29" y="294" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-36" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+        <mxCell id="xUnZi_pSxUf7bpd5QiFx-1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="150" y="300" as="sourcePoint" />
-            <mxPoint x="447.96000000000004" y="300" as="targetPoint" />
+            <mxPoint x="149" y="324" as="sourcePoint" />
+            <mxPoint x="446.96000000000004" y="324" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-37" value="{method:get} getAllUserCount" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry x="225" y="280" width="170" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-38" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.296;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="320" as="sourcePoint" />
-            <mxPoint x="150" y="321" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="giRAST-PsFqEcgFFe73X-39" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.296;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="219" as="sourcePoint" />
-            <mxPoint x="150" y="220" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="xUnZi_pSxUf7bpd5QiFx-2" value="{method: put} user/review/workshop : workshopid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y8C7f3c6BkwXQpBVVaye-1">
+          <mxGeometry x="154" y="304" width="280" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
