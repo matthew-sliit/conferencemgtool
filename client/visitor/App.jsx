@@ -7,6 +7,7 @@ import WorkshopSubmission from "./Component/workshopSubmission";
 import ContactUs from "./Component/contactus";
 import Commitee from "./Component/commitee";
 import PaperTopic from "./Component/PaperTopic";
+import AttendenceInstructions from "./Component/AttendenceInstructions";
 export default () => {
     return <Router>
         <Switch>
@@ -30,6 +31,15 @@ export default () => {
             </Route>
             <Route exact path={"/topics"}>
                 <PaperTopic/>
+            </Route>
+            <Route exact path={"/for-attendee"}>
+                <AttendenceInstructions/>
+            </Route>
+            <Route exact path={"/userportal/login"}>
+                {()=>{window.location.href="http://localhost:1235/"}}
+            </Route>
+            <Route exact path={"/userportal/register"}>
+                {()=>{window.location.href="http://localhost:1235/sign-up"}}
             </Route>
         </Switch>
     </Router>
