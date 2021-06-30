@@ -54,14 +54,15 @@ export default class LoginForm extends React.Component{
                     error_msg = server_msg;
         return <React.Fragment>
 
-            <div  style={{backgroundColor: "lightblue"}}>
-<center>
+            <center>
+            <div className={"card w-25 d-flex justify-content-center"} style={{backgroundColor: "#F8EEFF"}}>
+                <div className={"card-body"}>
 
 
-            <h3>Login</h3>
+                    <h3 style={{color:"purple"}}>Login</h3>
             <p>{error_msg}</p>
 
-                <div className="form-group w-25">
+                <div className="form-group">
             <input type={"text"} class="form-control" placeholder={"Enter username"} ref={(ref) => {this.username = ref}}/>
             <p/>
             <input type={"password"}  class="form-control"  placeholder={"Enter password"} ref={(ref) => {this.password = ref}}/>
@@ -72,11 +73,13 @@ export default class LoginForm extends React.Component{
             <button class="btn btn-primary" onClick={this.redirectToSignUp}>&nbsp;&nbsp;Register &nbsp;&nbsp;</button> <br></br>
             <br/>
             <a href={"/forgot-password"}>Forgot Password</a>
-             </center>
+
+                </div>
             </div>
             <div style={{position:"absolute",bottom:0, width:"100%", left:0}}>
                 <Footer/>
             </div>
+            </center>
         </React.Fragment>
     }
 }

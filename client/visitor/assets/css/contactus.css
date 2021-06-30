@@ -1,7 +1,7 @@
 .bg{
 	background: linear-gradient(rgba(62, 63, 64, 0.6), rgba(62, 63, 64, 0.6));
   background-image: url("../conbg.jpg");
-  background-color: #5200ad ;
+  background-color: #6011ae;
   width: 75%
   
 }
@@ -33,14 +33,14 @@
     margin-bottom: 8%;
     margin-top: -10%;
     text-align: center;
-    color: #1E90FF;
+    color: #6011ae;
 }
 .contact-form .btnContact {
     width: 50%;
     border: none;
     border-radius: 1rem;
     padding: 1.5%;
-    background: #008CBA;
+    background: #9039d2;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -51,7 +51,7 @@
     border-radius: 1rem;
     padding: 1.5%;
     color: #fff;
-    background-color: #0062cc;
+    background-color: #6011ae;
     border: none;
     cursor: pointer;
 }

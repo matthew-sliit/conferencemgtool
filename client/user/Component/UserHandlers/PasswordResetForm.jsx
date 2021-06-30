@@ -18,10 +18,13 @@ export default class PasswordResetForm extends React.Component{
     render() {
         const server_msg = this.state.server_msg;
         return <React.Fragment>
-            <h5>Password Reset Request</h5>
+            <center>
+                <div className={"card w-25"} style={{backgroundColor: "#F8EEFF"}}>
+                    <div className={"card-body"}>
+                        <h3 style={{color:"purple"}}>Password Reset Request</h3>
             {server_msg!==null?server_msg:""}
             <p/>
-            <table>
+            <table className="w-100">
                 <thead><tr><th></th><th></th></tr></thead>
                 <tbody>
                 <tr>
@@ -37,6 +40,9 @@ export default class PasswordResetForm extends React.Component{
             <br/>
             <button class="btn btn-danger" onClick={this.resetPasswordInServer}>Request Reset</button> &nbsp;
             <button class="btn btn-success" onClick={()=>{window.location.href="/"}}>Login</button>
+                    </div>
+                </div>
+            </center>
         </React.Fragment>
     }
 }
