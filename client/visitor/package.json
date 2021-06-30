@@ -2,7 +2,7 @@
   "name": "visitor-service",
   "version": "1.0.0",
   "description": "hosts frontend pages for site visitors",
-  "main": "index.js",
+  "main": "build_visitor/index.html",
   "config": {
     "port": 1234,
     "localhost": "http://localhost:3000",
@@ -12,6 +12,7 @@
   "scripts": {
     "https-mode": "set HTTPS=true&&npm start",
     "start": "parcel index.html -p 1234",
+    "build": "parcel build index.html",
     "test": "jest tests --passWithNoTests"
   },
   "author": "EagleEye",
