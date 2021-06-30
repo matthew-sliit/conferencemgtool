@@ -75,8 +75,8 @@ export default class RegisterForm extends React.Component{
                 </tr>
                 </tbody>
             </table><p/>
-            <button class="btn btn-primary" onClick={this.handleRegister}>Register</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-success" onClick={this.redirectToLogin}>Login</button>
+            <button className="btn btn-primary" onClick={this.handleRegister}>Register</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-success" onClick={this.redirectToLogin}>Login</button>
                 </div>
             </div>
            </center>

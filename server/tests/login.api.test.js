@@ -53,8 +53,16 @@ test('update a Document in db',()=>{
     });
 });
 //delete the document that was saved
+/*
 test('delete a Document from db',()=>{
     return deleteDocument(Login.COLLECTION,Login.USERNAME,username).then(result =>{
         expect(result.deletedCount).toBe(1);
     });
 });
+ */
+//should run at end
+afterAll(()=>{
+    return deleteDocument(Login.COLLECTION,Login.USERNAME,username).then(result =>{
+        expect(result.deletedCount).toBe(1);
+    });
+})
