@@ -12,7 +12,7 @@ const passwordGen = require('../api/util/password-generator');
 const CSV_Worker = require('../api/worker/csv-worker.js');
 const {updateDocument} = require("../api/db/mongodb.api");
 //model classes
-const Login = require('../api/login.api').Login;
+const Login = require('../api/adminlogin.api').AdminLogin;
 const Profile = require('../api/profile.api').Profile;
 //router prefix
 const router = new Router({
@@ -50,7 +50,7 @@ router.post('/', async ctx=>{
         let login = new Login();
         login.setUsername(generatedUsername);
         login.setPassword(generatedPassword);
-        login.setRole(role);
+        login.setRoleAdmin(role);
         //save login model and get it's object id
         let generatedMongoId;
         await saveDocumentGetId(Login.COLLECTION,login.getSaveToDB()).then(

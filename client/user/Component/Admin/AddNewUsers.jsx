@@ -61,7 +61,7 @@ export default class AddNewUsers extends React.Component{
             body:JSON.stringify({"email":email,"role":getRole(type),"userid":userid})
         }).then(r=>r.text()).then(d=>this.setState({server_msg:JSON.parse(d)})).catch(e=>console.log(e));
         const server_msg = this.state.server_msg;
-        console.log(JSON.stringify(server_msg));
+        //console.log(JSON.stringify(server_msg));
         if(typeof server_msg.username !== "undefined"){
             document.getElementById("admin_show_username").value = server_msg.username;
             document.getElementById("admin_show_password").value = server_msg.password;
