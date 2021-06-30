@@ -1,10 +1,6 @@
 const usernameGEN = require('../api/util/username-generator');
 const passwordGEN = require('../api/util/password-generator');
-const {UserRoles} = require("../../client/user/api/roles");
-
-test("password is generated correctly",()=>{
-    console.log(passwordGEN.generatePassword());
-});
+const {UserRoles} = require("../api/common/roles");
 
 test("Username for admin is generated Correctly",()=>{
     const adminUsername = usernameGEN.generateUsername(UserRoles.ADMIN);

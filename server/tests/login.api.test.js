@@ -62,7 +62,7 @@ test('delete a Document from db',()=>{
  */
 //should run at end
 afterAll(()=>{
-    return deleteDocument(Login.COLLECTION,Login.USERNAME,username).then(result =>{
+      return deleteDocument(Login.COLLECTION,Login.USERNAME,username).then(result =>{
         expect(result.deletedCount).toBe(1);
     });
 })

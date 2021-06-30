@@ -22,7 +22,7 @@ export default function DocumentsHtml(type,role,documents,onClickUpload, error){
         //<tr><td>1</td><td><a href="#">Paper</a></td><td>On-Review</td></tr>
     });
     return <React.Fragment>
-        <h3><u>Please Follow the Rules Given Below Before Submitting Your Research Paper!</u></h3>
+        <h3><u>Please Follow the Rules Given Below Before Submitting Your Paper!</u></h3>
         <h5> *All accepted and presented full papers to be submitted for publication to the IEEE Xplore*</h5>
 
         <ul>
