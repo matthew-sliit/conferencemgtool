@@ -34,11 +34,20 @@ export default () => {
             <Route exact path={"/topics"}>
                 <PaperTopic/>
             </Route>
+
             <Route exact path={"/guide"}>
                 <Guidelines/>
             </Route>
             <Route exact path={"/instructions"}>
                 <Instructions/>
+            </Route>
+
+            <Route exact path={"/userportal/login"}>
+                {()=>{window.location.href="http://localhost:1235/"}}
+            </Route>
+            <Route exact path={"/userportal/register"}>
+                {()=>{window.location.href="http://localhost:1235/sign-up"}}
+
             </Route>
         </Switch>
     </Router>
