@@ -7,6 +7,9 @@ import WorkshopSubmission from "./Component/workshopSubmission";
 import ContactUs from "./Component/contactus";
 import Commitee from "./Component/commitee";
 import PaperTopic from "./Component/PaperTopic";
+import Guidelines from "./Component/Guidelines";
+import Instructions from "./Component/Instructions";
+
 export default () => {
     return <Router>
         <Switch>
@@ -30,6 +33,12 @@ export default () => {
             </Route>
             <Route exact path={"/topics"}>
                 <PaperTopic/>
+            </Route>
+            <Route exact path={"/guide"}>
+                <Guidelines/>
+            </Route>
+            <Route exact path={"/instructions"}>
+                <Instructions/>
             </Route>
         </Switch>
     </Router>
