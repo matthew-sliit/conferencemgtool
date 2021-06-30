@@ -123,7 +123,7 @@ export default class ConferenceResources extends React.Component{
         //console.log(JSON.stringify(showWorkshops));
         return <React.Fragment>
             <h6>Workshops</h6>
-            <button className={"btn btn-outline-success"} onClick={this.clickDownload.bind(this,'ws')}>Download</button>
+            <button className={"btn btn-outline-success"} onClick={this.clickDownload.bind(this,'ws')} style={{display:"none"}}>Download</button>
             <select ref={(ref) => {this.ws_filter = ref}} onChange={this.filterPapers.bind(this,'ws')}>
                 <option>All</option>
                 <option value={"accept"}>Accepted</option>
@@ -134,7 +134,7 @@ export default class ConferenceResources extends React.Component{
             </div>
             <p/>
             <h6>Papers</h6>
-            <button className={"btn btn-outline-success"} onClick={this.clickDownload.bind(this,'author')}>Download</button>
+            <button className={"btn btn-outline-success"} onClick={this.clickDownload.bind(this,'author')} style={{display:"none"}}>Download</button>
             <select ref={(ref) => {this.paper_filter = ref}} onChange={this.filterPapers.bind(this,'author')}>
                 <option>All</option>
                 <option value={"accept"}>Accepted</option>

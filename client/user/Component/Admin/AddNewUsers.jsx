@@ -97,7 +97,7 @@ export default class AddNewUsers extends React.Component{
         })
         return <React.Fragment>
             {buttons}
-            <button className={this.neutralBtnStyle}  id={"adadmin_csv"} onClick={this.onClickCSVType}>Upload CSV</button>
+            <button className={this.neutralBtnStyle}  id={"adadmin_csv"} onClick={this.onClickCSVType} style={{display:"none"}}>Upload CSV</button>
             <p/>
             {error}
             {choice!==null?choice:''}
