@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-06-30T15:17:02.397Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="cT-GPinVFy6bFGvkHZ5n" version="14.8.3" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-06-30T15:23:29.482Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36 Edg/89.0.774.77" etag="gbPIyG4oRdXUJena2pRS" version="14.8.1" type="github" pages="9">
   <diagram id="q4KeziVVks7lWcbCtezH" name="Admin">
-    <mxGraphModel dx="1038" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1546,7 +1546,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ugo4WFew55POnnLb7gDi" name="admin-NEW">
-    <mxGraphModel dx="1077" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="kd-3siLI_j9INnRSxrtd-0" />
         <mxCell id="kd-3siLI_j9INnRSxrtd-1" parent="kd-3siLI_j9INnRSxrtd-0" />
@@ -1955,7 +1955,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Knei1hJ0zpYSQH0NzF0j" name="editor-NEW">
-    <mxGraphModel dx="1077" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="5mJ-m7YQdyiupnQrqisK-0" />
         <mxCell id="5mJ-m7YQdyiupnQrqisK-1" parent="5mJ-m7YQdyiupnQrqisK-0" />
@@ -1965,7 +1965,7 @@
         <mxCell id="IAFdow5OokUz758vFeeQ-1" value="EditorRoutes" style="rounded=0;whiteSpace=wrap;html=1;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
           <mxGeometry x="448" y="103" width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="IAFdow5OokUz758vFeeQ-2" value="{method: get} /editor/history&lt;span&gt;&amp;nbsp;: userid&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
+        <mxCell id="IAFdow5OokUz758vFeeQ-2" value="{method: get} /editor/history/&amp;nbsp;&lt;b&gt;: &lt;/b&gt;userid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
           <mxGeometry x="190" y="103" width="210" height="20" as="geometry" />
         </mxCell>
         <mxCell id="IAFdow5OokUz758vFeeQ-6" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;" parent="5mJ-m7YQdyiupnQrqisK-1" edge="1">
@@ -1992,7 +1992,7 @@
             <mxPoint x="447.96000000000004" y="234" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IAFdow5OokUz758vFeeQ-11" value="{method: get} editor/conference/ : conferenceid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
+        <mxCell id="IAFdow5OokUz758vFeeQ-11" value="{method: get} editor/conference/ &lt;b&gt;: &lt;/b&gt;conferenceid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
           <mxGeometry x="160" y="214" width="270" height="20" as="geometry" />
         </mxCell>
         <mxCell id="IAFdow5OokUz758vFeeQ-12" value="View Edited History" style="rounded=0;whiteSpace=wrap;html=1;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
@@ -2004,8 +2004,8 @@
             <mxPoint x="446.96000000000004" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="IAFdow5OokUz758vFeeQ-14" value="{method: put} editor/suggest/: userid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
-          <mxGeometry x="184" y="280" width="210" height="20" as="geometry" />
+        <mxCell id="IAFdow5OokUz758vFeeQ-14" value="{method: put} editor/suggest/&amp;nbsp;&lt;b&gt;: &lt;/b&gt;userid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
+          <mxGeometry x="185" y="280" width="210" height="20" as="geometry" />
         </mxCell>
         <mxCell id="kuBVNlraDJ0tzERbmeB2-0" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.296;exitDx=0;exitDy=0;exitPerimeter=0;" parent="5mJ-m7YQdyiupnQrqisK-1" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -2016,7 +2016,7 @@
         <mxCell id="kuBVNlraDJ0tzERbmeB2-1" value="EditorRoutes" style="rounded=0;whiteSpace=wrap;html=1;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
           <mxGeometry x="448" y="370" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="kuBVNlraDJ0tzERbmeB2-2" value="{method: get} editor/history/ : userid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
+        <mxCell id="kuBVNlraDJ0tzERbmeB2-2" value="{method: get} editor/history/&amp;nbsp;&lt;b&gt;: &lt;/b&gt;userid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="5mJ-m7YQdyiupnQrqisK-1" vertex="1">
           <mxGeometry x="190" y="370" width="210" height="20" as="geometry" />
         </mxCell>
         <mxCell id="kuBVNlraDJ0tzERbmeB2-3" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.296;exitDx=0;exitDy=0;exitPerimeter=0;" parent="5mJ-m7YQdyiupnQrqisK-1" edge="1">
