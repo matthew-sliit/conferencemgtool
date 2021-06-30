@@ -50,10 +50,11 @@ export default class RegisterForm extends React.Component{
         const error_msg = this.state.error_msg;
         return <React.Fragment>
             <center>
-            <div  style={{backgroundColor: "lightblue"}}>
+            <div className={"card w-50"} style={{backgroundColor: "#F8EEFF"}}>
+                <div className={"card-body"}>
             <p>{server_msg!==null?server_msg:''}</p>
-            <h5>Registration</h5>
-            <table>
+            <h3 style={{color:"purple"}}>Registration</h3>
+            <table className={"w-75"}>
                 <thead><tr><th></th><th></th></tr></thead>
                 <tbody>
                 <UserAdded obj={"new"}/>
@@ -62,13 +63,13 @@ export default class RegisterForm extends React.Component{
                         <p/>
                         {error_msg!==null?<p style={{color:"red"}}>{error_msg}</p>:''}
                         <label>Paper Author&nbsp;</label>
-                        <input type={"checkbox"} id={'author'} onClick={this.handleCheckbox.bind(this,'author')}/>
+                        <input type={"checkbox"} id={'author'}  onClick={this.handleCheckbox.bind(this,'author')}/>
                         <p/>
                         <label>Workshop Presenter&nbsp;</label>
-                        <input type={"checkbox"} id={'workshop'} onClick={this.handleCheckbox.bind(this,'workshop')}/>
+                        <input type={"checkbox"} id={'workshop'}  onClick={this.handleCheckbox.bind(this,'workshop')}/>
                         <p/>
                         <label>Attendee&nbsp;</label>
-                        <input type={"checkbox"} id={'attendee'} onClick={this.handleCheckbox.bind(this,'attendee')}/>
+                        <input type={"checkbox"} id={'attendee'}  onClick={this.handleCheckbox.bind(this,'attendee')}/>
                         <p/>
                     </td>
                 </tr>
@@ -76,6 +77,7 @@ export default class RegisterForm extends React.Component{
             </table><p/>
             <button class="btn btn-primary" onClick={this.handleRegister}>Register</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="btn btn-success" onClick={this.redirectToLogin}>Login</button>
+                </div>
             </div>
            </center>
         </React.Fragment>

@@ -45,7 +45,7 @@ export default class Home extends React.Component {
             }
         }
         return <React.Fragment>
-            <div id="content" className="position-relative">
+            <div>
                 <header>
 
                     <div
