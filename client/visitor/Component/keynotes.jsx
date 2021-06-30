@@ -24,7 +24,7 @@ export default class Keynotes extends React.Component {
 
         return <React.Fragment>
             <div id="content">
-                <div className="container about-title clearfix mx-auto">
+                <div className="container about-title clearfix ">
                     <h1><span>Keynote Speakers</span></h1>
                 </div>
                 <div className="card key">

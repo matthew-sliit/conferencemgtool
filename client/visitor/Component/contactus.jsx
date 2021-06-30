@@ -19,7 +19,7 @@ export default class WorkshopMain extends React.Component {
         return <React.Fragment>
             <div>
                 <div>
-                    <div class="contact-form">
+                    <div class="contact-form w-75">
                         <div class="contact-image">
                             <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="image"/>
                         </div>
@@ -52,9 +52,10 @@ export default class WorkshopMain extends React.Component {
 
                             </div>
                         </form>
-                        <Footer/>
+
                 </div>
             </div>
+                <Footer/>
             </div>
         </React.Fragment>
     }

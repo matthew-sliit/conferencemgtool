@@ -17,7 +17,7 @@ export default class Commitee extends React.Component {
 
     render() {
         return <React.Fragment>
-            <div style={{position:"relative",left:"-4px"}}>
+            <div>
                 <div className="justify-content-center">
                 <div className="container about-title clearfix mx-auto">
                     <h1><span>Organizing Commitee</span></h1>
