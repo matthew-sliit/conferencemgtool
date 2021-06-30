@@ -6,7 +6,7 @@ import WorkshopMain from "./Component/workshopMain";
 import WorkshopSubmission from "./Component/workshopSubmission";
 import ContactUs from "./Component/contactus";
 import Commitee from "./Component/commitee";
-
+import PaperTopic from "./Component/PaperTopic";
 export default () => {
     return <Router>
         <Switch>
@@ -26,9 +26,11 @@ export default () => {
                 <Commitee/>
             </Route>
             <Route exact path={"/workshopSubmission"}>
-            <WorkshopSubmission/>
+                <WorkshopSubmission/>
             </Route>
-
+            <Route exact path={"/topics"}>
+                <PaperTopic/>
+            </Route>
         </Switch>
     </Router>
 }
